@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaGasPump, FaTachometerAlt, FaCog, FaStar, FaRegHeart, FaHeart } from 'react-icons/fa';
 import LazyImage from '../ui/LazyImage';
 import { VehicleGridSkeleton } from '../ui/LoadingStates';
+import Link from 'next/link';
 
 interface Vehicle {
   id: string;
@@ -150,12 +151,12 @@ const VehicleCard: React.FC<{ vehicle: Vehicle }> = ({ vehicle }) => {
         
         <div className="mt-4 flex items-center justify-between">
           <span className="text-neutral-500 text-sm">{vehicle.year}</span>
-          <a 
+          <Link 
             href={`/vehicles/${vehicle.id}`}
             className="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md transition-colors text-sm font-medium group-hover:shadow-md"
           >
             View Details
-          </a>
+          </Link>
         </div>
       </div>
     </div>

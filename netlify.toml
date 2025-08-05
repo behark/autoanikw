@@ -27,7 +27,11 @@
   to = "/.netlify/functions/next_render/:splat"
   status = 200
 
-# Fallback redirect for SPA (not typically needed with Next.js + Netlify plugin)
+# Fallback for client-side routing in SPA mode
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 [[redirects]]
   from = "/*"
   to = "/index.html"

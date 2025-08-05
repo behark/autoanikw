@@ -6,12 +6,17 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>AutoAni - Luxury Automotive Marketplace</title>
-        <meta name="description" content="Discover premium quality pre-owned vehicles with AutoAni's curated selection and exceptional service." />
+        <title>AutoAni - Luxury Automotive Excellence | Premium Vehicle Marketplace</title>
+        <meta name="description" content="Discover exceptional vehicles for exceptional people. AutoAni offers premium pre-owned luxury cars with meticulous attention to quality and customer service." />
+        <meta name="keywords" content="luxury cars, premium vehicles, automotive marketplace, Mercedes-Benz, BMW, Audi" />
+        <meta property="og:title" content="AutoAni - Luxury Automotive Excellence" />
+        <meta property="og:description" content="Discover premium quality pre-owned vehicles with AutoAni's curated selection and exceptional service." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://autoani.netlify.app" />
+        <meta property="og:image" content="https://autoani.netlify.app/og-image.jpg" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://autoani.netlify.app" />
       </Head>
-
-      <Navbar />
 
       {/* Luxury Hero Section */}
       <section className="hero">
