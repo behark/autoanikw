@@ -1,0 +1,10 @@
+# Correct Netlify configuration for a Next.js project
+
+[build]
+  # The build command for Next.js
+  command = "npm run build"
+
+# This plugin automatically configures your Next.js site on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
