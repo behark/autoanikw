@@ -1,21 +1,15 @@
-const Navbar = () => {
+import Link from 'next/link'
+
+const Header = () => {
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <a href="/" className="nav-logo">
+    <header className="bg-slate-900 text-white py-4">
+      <div className="container mx-auto px-4">
+        <Link href="/" className="text-2xl font-bold">
           AutoAni
-        </a>
-        
-        <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/vehicles">Vehicles</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
+        </Link>
       </div>
-    </nav>
+    </header>
   );
 };
 
-export default Navbar;
+export default Header;

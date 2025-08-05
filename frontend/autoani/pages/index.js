@@ -1,16 +1,15 @@
 import Head from 'next/head';
-import Header from '../src/components/layout/Header';
+import MainLayout from '../src/components/layout/MainLayout';
 
 export default function Home() {
   return (
-    <>
+    <MainLayout>
       <Head>
         <title>AutoAni - Luxury Automotive Excellence</title>
         <meta name="description" content="Discover exceptional vehicles for exceptional people. Premium luxury automotive experience with meticulously curated collection." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Header />
       
       {/* Luxury Hero Section */}
       <section className="hero">
@@ -200,6 +199,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </>
+    </MainLayout>
   );
 }
