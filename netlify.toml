@@ -1,0 +1,47 @@
+[build]
+  # Build command for the frontend
+  command = "cd frontend/autoani && npm ci && npm run build"
+  # Published directory
+  publish = "frontend/autoani/out"
+  # Base directory
+  base = "."
+
+[build.environment]
+  # Node.js version
+  NODE_VERSION = "18"
+  # Environment for Next.js
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Redirect rules for SPA routing
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/vehicles/*"
+  to = "/vehicles/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Functions directory for API endpoints (if needed later)
+[functions]
+  directory = "netlify/functions"
