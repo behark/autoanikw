@@ -2,7 +2,7 @@
   # Build command for the frontend
   command = "cd frontend/autoani && npm ci && npm run build"
   # Published directory
-  publish = "frontend/autoani/out"
+  publish = "frontend/autoani/out/server/pages"
   # Base directory
   base = "."
 
