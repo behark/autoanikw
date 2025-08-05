@@ -2,25 +2,15 @@
 const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
+  // For static export
+  output: 'export',
   images: {
     unoptimized: true,
     domains: ['images.unsplash.com'], // Add any other domains you're loading images from
   },
-  // Using default .next directory for Netlify compatibility
-  distDir: '.next',
-  // Ensure we generate a 404 page
-  async rewrites() {
-    return {
-      fallback: [
-        // These rewrites are checked after both pages/public files
-        // and dynamic routes are checked
-        {
-          source: '/:path*',
-          destination: `/_404/:path*`,
-        },
-      ],
-    }
-  }
+  // Remove rewrites for static export since they aren't compatible
+  // with static export and the output: 'export' option
+  // Remove the target: 'serverless' as it's deprecated
 }
 
 module.exports = nextConfig

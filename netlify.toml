@@ -1,8 +1,8 @@
 [build]
-  # Build command for the frontend
-  command = "cd frontend/autoani && npm ci && npm run build"
-  # Published directory
-  publish = "frontend/autoani/.next"
+  # Build command for the frontend with static export
+  command = "cd frontend/autoani && npm ci && npm run build && npm run export"
+  # Published directory for Next.js static export
+  publish = "frontend/autoani/out"
   # Base directory
   base = "."
 
@@ -11,27 +11,8 @@
   NODE_VERSION = "18"
   # Environment for Next.js
   NEXT_TELEMETRY_DISABLED = "1"
-  # Add required environment variables for Next.js plugin
-  NEXT_PRIVATE_TARGET = "server" 
-  # Specify build output directory for Next.js
-  NETLIFY_NEXT_BASE_DIR = "frontend/autoani"
 
-# Netlify rewrites and proxies for Next.js
-[[redirects]]
-  from = "/_next/static/*"
-  to = "/static/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/next_render/:splat"
-  status = 200
-
-# Fallback for client-side routing in SPA mode
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# For client-side routing in SPA mode
 [[redirects]]
   from = "/*"
   to = "/index.html"
