@@ -1,8 +1,9 @@
-# Correct Netlify configuration for a Next.js project
+# Netlify configuration for Next.js project
 
 [build]
   # The build command for Next.js
   command = "npm run build"
+  publish = ".next"
 
 # This plugin automatically configures your Next.js site on Netlify
 [[plugins]]

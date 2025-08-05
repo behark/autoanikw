@@ -1,16 +1,18 @@
 import Head from 'next/head';
 import MainLayout from '../src/components/layout/MainLayout';
+import Navbar from '../src/components/layout/Navbar'
 
 export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>AutoAni - Luxury Automotive Excellence</title>
-        <meta name="description" content="Discover exceptional vehicles for exceptional people. Premium luxury automotive experience with meticulously curated collection." />
+        <title>AutoAni - Luxury Automotive Marketplace</title>
+        <meta name="description" content="Discover premium quality pre-owned vehicles with AutoAni's curated selection and exceptional service." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      
+
+      <Navbar />
+
       {/* Luxury Hero Section */}
       <section className="hero">
         <div className="hero-content">
@@ -166,37 +168,9 @@ export default function Home() {
       </section>
 
       {/* Professional Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-section">
-              <h3>AutoAni</h3>
-              <p>Exceptional vehicles for exceptional people. Your premier destination for luxury automotive excellence.</p>
-            </div>
-            
-            <div className="footer-section">
-              <h3>Quick Links</h3>
-              <ul className="footer-links">
-                <li><a href="#inventory">Inventory</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div className="footer-section">
-              <h3>Contact Info</h3>
-              <ul className="footer-links">
-                <li>Phone: (555) 123-4567</li>
-                <li>Email: info@autoani.com</li>
-                <li>Address: 123 Luxury Ave, City, State</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="footer-bottom">
-            <p>&copy; 2024 AutoAni. All rights reserved.</p>
-          </div>
+      <footer className="bg-gray-800 text-white py-8 mt-16">
+        <div className="container mx-auto px-4">
+          <p>&copy; 2023 AutoAni. All rights reserved.</p>
         </div>
       </footer>
     </MainLayout>

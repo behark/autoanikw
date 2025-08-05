@@ -2,7 +2,7 @@
   # Build command for the frontend
   command = "cd frontend/autoani && npm ci && npm run build"
   # Published directory
-  publish = "frontend/autoani/out/server/pages"
+  publish = "frontend/autoani/.next"
   # Base directory
   base = "."
 
@@ -12,10 +12,14 @@
   # Environment for Next.js
   NEXT_TELEMETRY_DISABLED = "1"
 
+# This plugin automatically configures your Next.js site on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 # Redirect rules for SPA routing
 [[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
+  from = "/*"
+  to = "/.netlify/functions/next_render/:splat"
   status = 200
 
 [[redirects]]
