@@ -11,22 +11,23 @@
   NODE_VERSION = "18"
   # Environment for Next.js
   NEXT_TELEMETRY_DISABLED = "1"
+  # Add required environment variables for Next.js plugin
+  NEXT_PRIVATE_TARGET = "server" 
+  # Specify build output directory for Next.js
+  NETLIFY_NEXT_BASE_DIR = "frontend/autoani"
 
-# This plugin automatically configures your Next.js site on Netlify
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Netlify rewrites and proxies for Next.js
+[[redirects]]
+  from = "/_next/static/*"
+  to = "/static/:splat"
+  status = 200
 
-# Redirect rules for SPA routing
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/next_render/:splat"
   status = 200
 
-[[redirects]]
-  from = "/vehicles/*"
-  to = "/vehicles/index.html"
-  status = 200
-
+# Fallback redirect for SPA (not typically needed with Next.js + Netlify plugin)
 [[redirects]]
   from = "/*"
   to = "/index.html"

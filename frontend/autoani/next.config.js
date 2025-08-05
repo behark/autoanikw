@@ -6,7 +6,8 @@ const nextConfig = {
     unoptimized: true,
     domains: ['images.unsplash.com'], // Add any other domains you're loading images from
   },
-  distDir: 'out'
+  // Using default .next directory for Netlify compatibility
+  distDir: '.next'
 }
 
 module.exports = nextConfig

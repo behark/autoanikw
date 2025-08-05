@@ -9,3 +9,8 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+[build.environment]
+  # Environment for Next.js
+  NEXT_TELEMETRY_DISABLED = "1"
+  NEXT_PRIVATE_TARGET = "server"
+
