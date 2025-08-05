@@ -22,7 +22,7 @@ export const getVehicles = async (req: Request, res: Response): Promise<void> =>
     const filter: any = {};
     
     if (brand) filter.brand = { $regex: brand, $options: 'i' };
-    if (model) filter.model = { $regex: model, $options: 'i' };
+    if (model) filter.vehicleModel = { $regex: model, $options: 'i' };
     if (year) filter.year = year;
     if (fuel) filter.fuel = { $regex: fuel, $options: 'i' };
     if (status) filter.status = status;
@@ -119,7 +119,7 @@ export const updateVehicle = async (req: Request, res: Response): Promise<void> 
     // Handle file uploads if present
     if (req.files && Array.isArray(req.files) && (req.files as Express.Multer.File[]).length > 0) {
       // Keep existing images if not replacing them completely
-      const existingImages = updateData.keepExistingImages ? vehicle.images : [];
+      const existingImages = updateData.keepExistingImages ? (vehicle.images || []) : [];
       
       // Add new images
       const newImages = (req.files as Express.Multer.File[]).map((file) => ({

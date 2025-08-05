@@ -8,12 +8,13 @@ export interface IVehicleImage {
 }
 
 // Vehicle schema interface
-export interface IVehicle extends Document {
+export interface IVehicle {
+  _id?: string;
   title: string;
   subtitle?: string;
   description: string;
   brand: string;
-  model: string;
+  vehicleModel: string;
   year: number;
   price: number;
   engine: string;
@@ -22,14 +23,14 @@ export interface IVehicle extends Document {
   power: string;
   transmission: string;
   color: string;
-  images: IVehicleImage[];
-  features: string[];
-  categories: string[];
-  isNew: boolean;
-  hasCustoms: boolean;
-  status: 'available' | 'sold' | 'reserved';
-  createdAt: Date;
-  updatedAt: Date;
+  images?: IVehicleImage[];
+  features?: string[];
+  categories?: string[];
+  isNew?: boolean;
+  hasCustoms?: boolean;
+  status?: 'available' | 'sold' | 'reserved';
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 // Image schema
@@ -68,7 +69,7 @@ const VehicleSchema = new Schema<IVehicle>({
     required: [true, 'Brand is required'],
     trim: true
   },
-  model: {
+  vehicleModel: {
     type: String,
     required: [true, 'Model is required'],
     trim: true
@@ -137,7 +138,7 @@ VehicleSchema.index({
   subtitle: 'text',
   description: 'text',
   brand: 'text',
-  model: 'text'
+  vehicleModel: 'text'
 });
 
 export default mongoose.model<IVehicle>('Vehicle', VehicleSchema);
