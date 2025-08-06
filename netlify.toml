@@ -11,13 +11,28 @@
   NODE_VERSION = "18"
   # Environment for Next.js
   NEXT_TELEMETRY_DISABLED = "1"
-  # Add this for Netlify to use Next.js
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Required for Netlify to properly handle Next.js
+  NEXT_PRIVATE_TARGET = "server"
 
-# For client-side routing in SPA mode
+# Use the Next.js plugin
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Redirects and rewrites for Next.js
+[[redirects]]
+  from = "/_next/*"
+  to = "/_next/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/api/:splat"
+  status = 200
+
+# Fallback for all routes - very important for Next.js
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/next"
   status = 200
 
 [dev]
