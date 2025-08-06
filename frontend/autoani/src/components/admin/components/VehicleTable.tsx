@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'next-i18next';
 
 interface Vehicle {
   _id: string;
@@ -20,6 +21,7 @@ interface VehicleTableProps {
 }
 
 const VehicleTable: React.FC<VehicleTableProps> = ({ vehicles, onEdit, onDelete, loading = false }) => {
+  const { t } = useTranslation('common');
   const [selectedVehicles, setSelectedVehicles] = useState<string[]>([]);
 
   const handleSelectAll = () => {
@@ -47,7 +49,7 @@ const VehicleTable: React.FC<VehicleTableProps> = ({ vehicles, onEdit, onDelete,
     
     return (
       <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusStyles[status as keyof typeof statusStyles]}`}>
-        {status.charAt(0).toUpperCase() + status.slice(1)}
+        {t(`admin.vehicleManager.status.${status}`)}
       </span>
     );
   };
@@ -77,12 +79,14 @@ const VehicleTable: React.FC<VehicleTableProps> = ({ vehicles, onEdit, onDelete,
     <div className="bg-white shadow-sm rounded-lg overflow-hidden">
       <div className="px-6 py-4 border-b border-neutral-200">
         <div className="flex items-center justify-between">
-          <h3 className="text-lg font-medium text-neutral-900">Vehicles</h3>
+          <h3 className="text-lg font-medium text-neutral-900">{t('admin.vehicleManager.table.title')}</h3>
           {selectedVehicles.length > 0 && (
             <div className="flex items-center space-x-2">
-              <span className="text-sm text-neutral-600">{selectedVehicles.length} selected</span>
+              <span className="text-sm text-neutral-600">
+                {t('admin.vehicleManager.table.selectedCount', { count: selectedVehicles.length })}
+              </span>
               <button className="text-red-600 hover:text-red-700 text-sm font-medium">
-                Delete Selected
+                {t('admin.vehicleManager.table.deleteSelected')}
               </button>
             </div>
           )}
@@ -102,19 +106,19 @@ const VehicleTable: React.FC<VehicleTableProps> = ({ vehicles, onEdit, onDelete,
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                Vehicle
+                {t('admin.vehicleManager.table.columns.vehicle')}
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                Price
+                {t('admin.vehicleManager.table.columns.price')}
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                Mileage
+                {t('admin.vehicleManager.table.columns.mileage')}
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                Status
+                {t('admin.vehicleManager.table.columns.status')}
               </th>
               <th className="px-6 py-3 text-right text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                Actions
+                {t('admin.vehicleManager.table.columns.actions')}
               </th>
             </tr>
           </thead>
@@ -151,7 +155,7 @@ const VehicleTable: React.FC<VehicleTableProps> = ({ vehicles, onEdit, onDelete,
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="text-sm text-neutral-900">
-                    {vehicle.mileage.toLocaleString()} mi
+                    {vehicle.mileage.toLocaleString()} {t('admin.vehicleManager.table.mileageUnit')}
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
@@ -163,13 +167,13 @@ const VehicleTable: React.FC<VehicleTableProps> = ({ vehicles, onEdit, onDelete,
                       onClick={() => onEdit(vehicle)}
                       className="text-primary-600 hover:text-primary-700"
                     >
-                      Edit
+                      {t('admin.vehicleManager.table.actions.edit')}
                     </button>
                     <button
                       onClick={() => onDelete(vehicle._id)}
                       className="text-red-600 hover:text-red-700"
                     >
-                      Delete
+                      {t('admin.vehicleManager.table.actions.delete')}
                     </button>
                   </div>
                 </td>
@@ -184,8 +188,8 @@ const VehicleTable: React.FC<VehicleTableProps> = ({ vehicles, onEdit, onDelete,
           <svg className="mx-auto h-12 w-12 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
           </svg>
-          <h3 className="mt-2 text-sm font-medium text-neutral-900">No vehicles</h3>
-          <p className="mt-1 text-sm text-neutral-500">Get started by adding a new vehicle.</p>
+          <h3 className="mt-2 text-sm font-medium text-neutral-900">{t('admin.vehicleManager.table.empty.title')}</h3>
+          <p className="mt-1 text-sm text-neutral-500">{t('admin.vehicleManager.table.empty.message')}</p>
         </div>
       )}
     </div>

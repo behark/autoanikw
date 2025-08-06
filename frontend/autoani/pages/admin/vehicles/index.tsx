@@ -5,6 +5,8 @@ import AdminLayout from '../../../src/components/admin/layout/AdminLayout';
 import VehicleTable from '../../../src/components/admin/components/VehicleTable';
 import VehicleForm from '../../../src/components/admin/components/VehicleForm';
 import { adminAPI } from '../../../src/services/adminAPI';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 interface Vehicle {
   _id: string;
@@ -30,6 +32,7 @@ interface Vehicle {
 }
 
 const VehiclesManagement = () => {
+  const { t } = useTranslation('common');
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
@@ -110,7 +113,7 @@ const VehiclesManagement = () => {
   };
 
   const handleDeleteVehicle = async (vehicleId: string) => {
-    if (window.confirm('Are you sure you want to delete this vehicle?')) {
+    if (window.confirm(t('admin.vehicleManager.confirmDelete.message'))) {
       try {
         await adminAPI.deleteVehicle(vehicleId);
         setVehicles(vehicles.filter(v => v._id !== vehicleId));
@@ -157,8 +160,8 @@ const VehiclesManagement = () => {
   return (
     <>
       <Head>
-        <title>Vehicles Management - AutoAni Admin</title>
-        <meta name="description" content="Manage your vehicle inventory" />
+        <title>{t('admin.vehicleManager.title')} - AutoAni</title>
+        <meta name="description" content={t('admin.vehicleManager.description')} />
       </Head>
 
       <AdminLayout>
@@ -168,15 +171,15 @@ const VehiclesManagement = () => {
               {/* Page Header */}
               <div className="flex items-center justify-between">
                 <div>
-                  <h1 className="text-2xl font-bold text-neutral-900">Vehicles</h1>
-                  <p className="text-neutral-600">Manage your vehicle inventory</p>
+                  <h1 className="text-2xl font-bold text-neutral-900">{t('admin.vehicleManager.title')}</h1>
+                  <p className="text-neutral-600">{t('admin.vehicleManager.description')}</p>
                 </div>
                 <button
                   onClick={handleAddVehicle}
                   className="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 flex items-center"
                 >
                   <span className="mr-2">+</span>
-                  Add Vehicle
+                  {t('admin.vehicleManager.addVehicle')}
                 </button>
               </div>
 
@@ -192,20 +195,20 @@ const VehiclesManagement = () => {
                   </select>
                   
                   <select className="px-3 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500">
-                    <option value="">All Status</option>
-                    <option value="available">Available</option>
-                    <option value="sold">Sold</option>
-                    <option value="reserved">Reserved</option>
+                    <option value="">{t('admin.vehicleManager.table.status')}</option>
+                    <option value="available">{t('admin.vehicleManager.status.available')}</option>
+                    <option value="sold">{t('admin.vehicleManager.status.sold')}</option>
+                    <option value="reserved">{t('admin.vehicleManager.status.reserved')}</option>
                   </select>
                   
                   <input
                     type="text"
-                    placeholder="Search vehicles..."
+                    placeholder={t('admin.vehicleManager.search')}
                     className="px-3 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 min-w-0 flex-1"
                   />
                   
                   <button className="px-4 py-2 bg-neutral-100 text-neutral-700 rounded-md hover:bg-neutral-200">
-                    Filter
+                    {t('admin.vehicleManager.filter')}
                   </button>
                 </div>
               </div>
@@ -214,25 +217,25 @@ const VehiclesManagement = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div className="bg-white rounded-lg shadow-sm border border-neutral-200 p-4">
                   <div className="text-2xl font-bold text-neutral-900">{vehicles.length}</div>
-                  <div className="text-sm text-neutral-600">Total Vehicles</div>
+                  <div className="text-sm text-neutral-600">{t('admin.dashboard.stats.totalVehicles')}</div>
                 </div>
                 <div className="bg-white rounded-lg shadow-sm border border-neutral-200 p-4">
                   <div className="text-2xl font-bold text-green-600">
                     {vehicles.filter(v => v.status === 'available').length}
                   </div>
-                  <div className="text-sm text-neutral-600">Available</div>
+                  <div className="text-sm text-neutral-600">{t('admin.vehicleManager.status.available')}</div>
                 </div>
                 <div className="bg-white rounded-lg shadow-sm border border-neutral-200 p-4">
                   <div className="text-2xl font-bold text-red-600">
                     {vehicles.filter(v => v.status === 'sold').length}
                   </div>
-                  <div className="text-sm text-neutral-600">Sold</div>
+                  <div className="text-sm text-neutral-600">{t('admin.vehicleManager.status.sold')}</div>
                 </div>
                 <div className="bg-white rounded-lg shadow-sm border border-neutral-200 p-4">
                   <div className="text-2xl font-bold text-yellow-600">
                     {vehicles.filter(v => v.status === 'reserved').length}
                   </div>
-                  <div className="text-sm text-neutral-600">Reserved</div>
+                  <div className="text-sm text-neutral-600">{t('admin.vehicleManager.status.reserved')}</div>
                 </div>
               </div>
 
@@ -250,17 +253,17 @@ const VehiclesManagement = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <h1 className="text-2xl font-bold text-neutral-900">
-                    {editingVehicle ? 'Edit Vehicle' : 'Add New Vehicle'}
+                    {editingVehicle ? t('admin.vehicleManager.form.title') : t('admin.dashboard.quickActions.addVehicle.title')}
                   </h1>
                   <p className="text-neutral-600">
-                    {editingVehicle ? 'Update vehicle information' : 'Create a new vehicle listing'}
+                    {editingVehicle ? t('admin.vehicleManager.form.title') : t('admin.dashboard.quickActions.addVehicle.description')}
                   </p>
                 </div>
                 <button
                   onClick={handleFormCancel}
                   className="px-4 py-2 border border-neutral-300 rounded-md text-neutral-700 hover:bg-neutral-50"
                 >
-                  Back to List
+                  {t('admin.vehicleManager.form.buttons.cancel')}
                 </button>
               </div>
 
@@ -280,3 +283,11 @@ const VehiclesManagement = () => {
 };
 
 export default VehiclesManagement;
+
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+}

@@ -1,0 +1,983 @@
+{
+  "title": "AutoAni - Luxury Automotive Excellence | Premium Vehicle Marketplace",
+  "description": "Discover exceptional vehicles for exceptional people. AutoAni offers premium pre-owned luxury cars with meticulous attention to quality and customer service.",
+  "keywords": "luxury cars, premium vehicles, automotive marketplace, Mercedes-Benz, BMW, Audi",
+  "og": {
+    "title": "AutoAni - Luxury Automotive Excellence",
+    "description": "Discover premium quality pre-owned vehicles with AutoAni's curated selection and exceptional service."
+  },
+  "navigation": {
+    "home": "Home",
+    "vehicles": "Vehicles",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Exceptional Vehicles for Exceptional People",
+    "subtitle": "Discover premium quality pre-owned vehicles with AutoAni's curated selection and exceptional service.",
+    "stats": {
+      "vehicles": "Luxury Vehicles",
+      "experience": "Years Experience",
+      "satisfaction": "Client Satisfaction"
+    },
+    "buttons": {
+      "inventory": "View Our Inventory",
+      "about": "About Us"
+    }
+  },
+  "premiumSelection": {
+    "badge": "Premium Selection",
+    "title": "Featured Vehicles",
+    "subtitle": "Discover our selection of premium pre-owned vehicles, meticulously inspected and maintained to the highest standards."
+  },
+  "vehicle": {
+    "badge": {
+      "premium": "Premium",
+      "certified": "Certified",
+      "exclusive": "Exclusive"
+    },
+    "image": {
+      "mercedes": "Mercedes-Benz E-Class",
+      "bmw": "BMW 5 Series",
+      "audi": "Audi A6"
+    },
+    "brand": {
+      "mercedes": "Mercedes-Benz",
+      "bmw": "BMW",
+      "audi": "Audi"
+    },
+    "title": {
+      "mercedes": "E-Class 450",
+      "bmw": "5 Series 540i",
+      "audi": "A6 Prestige"
+    },
+    "price": {
+      "mercedes": "$42,500",
+      "bmw": "$39,000",
+      "audi": "$37,500"
+    },
+    "details": {
+      "mercedes": "2021 | 15,000 miles",
+      "bmw": "2020 | 22,500 miles",
+      "audi": "2019 | 28,000 miles"
+    },
+    "actions": {
+      "viewDetails": "View Details",
+      "contact": "Contact"
+    }
+  },
+  "premiumServices": {
+    "badge": "Premium Services",
+    "title": "Our Premium Services",
+    "subtitle": "At AutoAni, we go beyond just selling vehicles. We provide a comprehensive automotive experience with premium services tailored to your needs.",
+    "inspection": {
+      "title": "Detailed Inspection",
+      "description": "Every vehicle undergoes a comprehensive 150-point inspection to ensure quality and reliability."
+    },
+    "warranty": {
+      "title": "Extended Warranty",
+      "description": "Comprehensive warranty coverage for peace of mind with your luxury vehicle purchase."
+    },
+    "brands": {
+      "title": "Premium Brands",
+      "description": "Curated selection from the world's most respected automotive manufacturers."
+    }
+  },
+  "featuredVehicles": {
+    "title": "Featured Vehicles",
+    "subtitle": "Discover our selection of premium pre-owned vehicles, meticulously inspected and maintained to the highest standards.",
+    "viewDetails": "View Details",
+    "contact": "Contact"
+  },
+  "services": {
+    "meta": {
+      "title": "Our Services - AutoAni | Premium Automotive Services",
+      "description": "Discover AutoAni's comprehensive range of premium automotive services including sales, financing, maintenance, and concierge services for luxury vehicles.",
+      "keywords": "automotive services, luxury car services, vehicle financing, maintenance, concierge services, AutoAni"
+    },
+    "hero": {
+      "title": "Premium Services",
+      "subtitle": "Comprehensive automotive solutions designed to exceed your expectations. From sales to service, we provide excellence at every touchpoint."
+    },
+    "core": {
+      "title": "Our Core Services",
+      "description": "We offer a complete range of services to ensure your luxury automotive experience is seamless, enjoyable, and tailored to your unique needs.",
+      "sales": {
+        "title": "Premium Vehicle Sales",
+        "description": "Our curated selection of luxury vehicles undergoes rigorous inspection and certification. Each vehicle is handpicked for its exceptional quality, performance, and condition.",
+        "features": [
+          "Comprehensive 150-point vehicle inspection",
+          "Detailed vehicle history reports",
+          "Professional detailing and preparation",
+          "Transparent pricing and documentation"
+        ]
+      },
+      "financing": {
+        "title": "Financing Solutions",
+        "description": "Flexible financing options tailored to your financial situation. Our experienced finance team works with premium lenders to secure competitive rates and terms.",
+        "features": [
+          "Competitive interest rates and flexible terms",
+          "Quick pre-approval process",
+          "Lease and purchase options available",
+          "Trade-in evaluation and processing"
+        ]
+      },
+      "maintenance": {
+        "title": "Maintenance & Service",
+        "description": "Professional maintenance and service programs designed to keep your luxury vehicle performing at its peak. Our certified technicians use only premium parts and fluids.",
+        "features": [
+          "Factory-certified technicians and equipment",
+          "Genuine OEM parts and premium fluids",
+          "Comprehensive service packages",
+          "Convenient scheduling and pickup/delivery"
+        ]
+      },
+      "concierge": {
+        "title": "Concierge Services",
+        "description": "White-glove service that extends beyond the showroom. Our concierge team handles every detail to ensure a seamless and luxurious ownership experience.",
+        "features": [
+          "Vehicle delivery and pickup services",
+          "Insurance coordination and claims assistance",
+          "Registration and title transfer services",
+          "24/7 customer support and assistance"
+        ]
+      }
+    },
+    "additional": {
+      "title": "Additional Services",
+      "description": "Comprehensive support services designed to enhance your ownership experience and protect your investment for years to come.",
+      "warranty": {
+        "title": "Extended Warranties",
+        "description": "Comprehensive warranty programs that provide peace of mind and protect against unexpected repair costs.",
+        "features": [
+          "Multiple coverage levels available",
+          "Nationwide service network",
+          "Transferable to new owners"
+        ]
+      },
+      "tradein": {
+        "title": "Trade-In Services",
+        "description": "Professional vehicle appraisal and trade-in services that maximize the value of your current vehicle.",
+        "features": [
+          "Expert market-based valuations",
+          "Quick appraisal process",
+          "Competitive trade-in offers"
+        ]
+      },
+      "inspection": {
+        "title": "Vehicle Inspection",
+        "description": "Thorough pre-purchase inspections for vehicles from other sources to ensure quality and peace of mind.",
+        "features": [
+          "Comprehensive 150-point inspection",
+          "Detailed inspection reports",
+          "Professional recommendations"
+        ]
+      },
+      "sourcing": {
+        "title": "Vehicle Sourcing",
+        "description": "Can't find the exact vehicle you're looking for? Our sourcing team will locate your dream car from our network.",
+        "features": [
+          "Nationwide dealer network",
+          "Custom search parameters",
+          "Quality assurance guarantee"
+        ]
+      },
+      "detailing": {
+        "title": "Detailing Services",
+        "description": "Professional detailing services to keep your luxury vehicle looking pristine and maintaining its value.",
+        "features": [
+          "Interior and exterior detailing",
+          "Paint protection services",
+          "Ceramic coating applications"
+        ]
+      },
+      "support": {
+        "title": "Customer Support",
+        "description": "Dedicated customer support team available to assist with any questions or concerns throughout your ownership experience.",
+        "features": [
+          "24/7 customer support hotline",
+          "Dedicated account managers",
+          "Priority service scheduling"
+        ]
+      }
+    },
+    "process": {
+      "title": "Our Service Process",
+      "description": "Experience a streamlined process designed for your convenience and peace of mind. Every step is crafted to exceed your expectations.",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Consultation",
+          "description": "We begin with a detailed consultation to understand your needs, preferences, and budget requirements."
+        },
+        {
+          "number": "2",
+          "title": "Selection",
+          "description": "Our experts help you select the perfect vehicle from our curated inventory or source it specially for you."
+        },
+        {
+          "number": "3",
+          "title": "Financing",
+          "description": "We arrange competitive financing options and handle all paperwork to make the process seamless."
+        },
+        {
+          "number": "4",
+          "title": "Delivery",
+          "description": "Your vehicle is prepared to perfection and delivered with white-glove service and complete documentation."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Experience Premium Service",
+      "description": "Ready to experience the AutoAni difference? Contact us today to learn more about our services and how we can assist with your luxury automotive needs.",
+      "consultation": "Schedule Consultation",
+      "inventory": "Browse Inventory"
+    }
+  },
+  "vehicles": {
+    "meta": {
+      "title": "Luxury Vehicles Inventory | AutoAni",
+      "description": "Browse our exclusive collection of premium pre-owned luxury vehicles. Find your next dream car with AutoAni's curated selection.",
+      "keywords": "luxury vehicles, premium cars, pre-owned vehicles, luxury dealership, auto listings"
+    },
+    "hero": {
+      "title": "Exceptional Vehicles",
+      "subtitle": "Discover our handpicked collection of premium vehicles, each selected for their excellence in performance, design, and condition."
+    },
+    "filters": {
+      "brand": {
+        "label": "Brand",
+        "all": "All Brands"
+      },
+      "year": {
+        "label": "Year",
+        "all": "All Years"
+      },
+      "price": {
+        "label": "Price Range",
+        "all": "All Prices",
+        "under30k": "Under €30,000",
+        "30kTo60k": "€30,000 - €60,000",
+        "60kTo100k": "€60,000 - €100,000",
+        "over100k": "Over €100,000"
+      }
+    },
+    "listing": {
+      "results": "Showing {count} results",
+      "noResults": "No vehicles found matching your criteria",
+      "sortBy": "Sort by",
+      "sortOptions": {
+        "newest": "Newest First",
+        "oldest": "Oldest First",
+        "priceLowHigh": "Price: Low to High",
+        "priceHighLow": "Price: High to Low"
+      }
+    },
+    "vehicle": {
+      "details": "View Details",
+      "year": "Year",
+      "mileage": "{value} miles",
+      "transmission": "Transmission",
+      "fuel": "Fuel Type",
+      "condition": "Condition"
+    },
+    "detail": {
+      "specifications": "Specifications",
+      "features": "Features",
+      "inquire": "Inquire About This Vehicle",
+      "testDrive": "Schedule Test Drive",
+      "financing": "Financing Options",
+      "similar": "Similar Vehicles",
+      "backToInventory": "Back to Inventory"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About Us - AutoAni | Premium Luxury Vehicles",
+      "description": "Learn about AutoAni's commitment to excellence in luxury automotive sales. Discover our story, values, and dedication to exceptional customer service.",
+      "keywords": "about AutoAni, luxury car dealer, premium vehicles, automotive excellence, customer service"
+    },
+    "hero": {
+      "title": "About AutoAni",
+      "subtitle": "Dedicated to delivering exceptional luxury vehicles and unparalleled customer experiences since our founding. We believe every journey should be extraordinary."
+    },
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Founded with a vision to redefine the luxury automotive experience, AutoAni has been at the forefront of premium vehicle sales for over two decades. Our journey began with a simple belief: that exceptional people deserve exceptional vehicles.",
+      "paragraph2": "From our humble beginnings as a boutique dealership, we have grown into a trusted destination for discerning customers who appreciate quality, craftsmanship, and uncompromising attention to detail.",
+      "paragraph3": "Today, we continue to uphold the same principles that guided our founding: integrity, excellence, and an unwavering commitment to customer satisfaction."
+    },
+    "mission": {
+      "title": "Our Mission & Values",
+      "subtitle": "We are committed to providing an exceptional automotive experience that exceeds expectations and builds lasting relationships with our valued customers.",
+      "values": {
+        "excellence": {
+          "title": "Excellence",
+          "description": "We maintain the highest standards in everything we do, from vehicle selection to customer service, ensuring every interaction reflects our commitment to quality."
+        },
+        "integrity": {
+          "title": "Integrity",
+          "description": "Transparency and honesty guide every transaction. We build trust through clear communication and ethical business practices that put our customers first."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "We embrace cutting-edge technology and modern approaches to enhance the automotive buying experience while respecting traditional values of craftsmanship."
+        }
+      }
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Our experienced professionals are passionate about luxury vehicles and dedicated to helping you find the perfect match for your lifestyle and preferences.",
+      "members": {
+        "ceo": {
+          "role": "Executive Leadership",
+          "position": "Chief Executive Officer",
+          "description": "Leading the company with vision and expertise, driving innovation in the luxury automotive industry while maintaining our core values."
+        },
+        "sales": {
+          "role": "Sales Management",
+          "position": "Sales Director",
+          "description": "Overseeing customer relationships and ensuring every client receives personalized attention and expert guidance throughout their journey."
+        },
+        "specialists": {
+          "role": "Vehicle Specialists",
+          "position": "Product Experts",
+          "description": "Our knowledgeable specialists possess deep expertise in luxury vehicles, helping customers make informed decisions with confidence."
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose AutoAni",
+      "subtitle": "Discover what sets us apart in the luxury automotive market and why discerning customers choose AutoAni for their vehicle needs.",
+      "reasons": {
+        "quality": {
+          "title": "Quality Assurance",
+          "description": "Every vehicle undergoes rigorous inspection and meets our exacting standards for quality and performance."
+        },
+        "service": {
+          "title": "Expert Service",
+          "description": "Our team of professionals provides knowledgeable guidance and exceptional service at every step."
+        },
+        "warranty": {
+          "title": "Warranty Protection",
+          "description": "Comprehensive warranty options provide peace of mind and protection for your investment."
+        },
+        "experience": {
+          "title": "Luxury Experience",
+          "description": "From consultation to delivery, we ensure every aspect of your experience reflects luxury and sophistication."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Begin Your Journey?",
+      "description": "Experience the AutoAni difference. Let us help you find the perfect luxury vehicle that matches your lifestyle and exceeds your expectations.",
+      "inventory": "View Our Inventory",
+      "contact": "Contact Us Today"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact Us - AutoAni | Premium Luxury Vehicles",
+      "description": "Get in touch with AutoAni's team of luxury automotive specialists. We're here to answer your questions and help you find your perfect vehicle.",
+      "keywords": "contact AutoAni, luxury car dealership, premium vehicle inquiries, automotive consultation"
+    },
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We're here to assist you with any inquiries about our premium vehicles or services. Our team of automotive specialists is ready to provide personalized assistance."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully! We'll get back to you shortly.",
+      "error": "There was an error sending your message. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "Have questions or need assistance? Our team is ready to help you with any inquiries about our vehicles, services, or anything else.",
+      "address": {
+        "title": "Visit Us",
+        "line1": "AutoAni Premium Vehicles",
+        "line2": "123 Luxury Drive",
+        "line3": "Tirana, Albania 1001"
+      },
+      "phone": {
+        "title": "Call Us",
+        "number": "+355 4X XXX XXX",
+        "hours": "Monday-Friday: 9am-6pm, Saturday: 10am-4pm"
+      },
+      "email": {
+        "title": "Email Us",
+        "address": "info@autoani.com",
+        "support": "For support: support@autoani.com"
+      }
+    },
+    "map": {
+      "title": "Find Us",
+      "directions": "Get Directions",
+      "view": "View on Maps"
+    },
+    "hours": {
+      "title": "Business Hours",
+      "description": "Visit our premium showroom to see our luxury vehicles in person and meet with our expert team.",
+      "monday": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "time": "9:00 AM - 6:00 PM",
+      "appointment": "By Appointment Only",
+      "note": "Note:"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Quick answers to common questions about our services, processes, and policies.",
+      "trade": "Do you accept trade-ins?",
+      "trade": {
+        "description": "Yes, we accept trade-ins on most vehicles. Our expert appraisers will evaluate your current vehicle and provide a competitive market-based offer that can be applied toward your purchase."
+      },
+      "financing": "What financing options are available?",
+      "financing": {
+        "description": "We offer a variety of financing options including traditional auto loans, lease programs, and special financing for qualified buyers. Our finance team works with multiple lenders to secure the best rates and terms."
+      },
+      "history": "Do you provide vehicle history reports?",
+      "history": {
+        "description": "Absolutely. Every vehicle in our inventory comes with a comprehensive vehicle history report and has undergone our rigorous 150-point inspection process to ensure quality and reliability."
+      },
+      "locate": "Can you help locate a specific vehicle?",
+      "locate": {
+        "description": "Yes, our vehicle sourcing team can help locate specific makes, models, colors, and option packages through our extensive dealer network. Contact us with your requirements and we'll find your perfect vehicle."
+      }
+    },
+    "call": {
+      "title": "Ready to Get Started?",
+      "description": "Whether you're ready to purchase, have questions about our inventory, or need assistance with financing, our team is here to help you every step of the way.",
+      "phone": "Call Now: (555) 123-4567",
+      "inventory": "View Our Inventory"
+    }
+  },
+  "admin": {
+    "meta": {
+      "title": "Admin Dashboard - AutoAni",
+      "description": "AutoAni Admin Dashboard"
+    },
+    "sidebar": {
+      "title": "Admin Panel",
+      "dashboard": "Dashboard",
+      "vehicles": "Vehicles",
+      "users": "Users",
+      "mediaLibrary": "Media Library",
+      "analytics": "Analytics",
+      "activityLogs": "Activity Logs",
+      "settings": "Settings",
+      "user": {
+        "adminUser": "Admin",
+        "viewSite": "View Site",
+        "openSidebar": "Open Sidebar"
+      }
+    },
+    "mediaLibrary": {
+      "pageTitle": "Media Library",
+      "pageDescription": "Manage images and media files across the website",
+      "title": "Media Library",
+      "description": "Upload, browse and manage all media assets",
+      "uploadMedia": "Upload Media",
+      "dropFilesHere": "Drop files here, or click to select files",
+      "dragAndDrop": "Drag and drop files here, or",
+      "browseFiles": "Browse files",
+      "uploading": "Uploading...",
+      "uploadSuccess": "Files uploaded successfully",
+      "uploadError": "Error uploading files",
+      "noFilesSelected": "No files selected",
+      "uploadingProgress": "Uploading: {{progress}}%",
+      "mediaCount": "{{count}} media items",
+      "filters": {
+        "all": "All Media",
+        "images": "Images",
+        "documents": "Documents",
+        "recent": "Recently Uploaded"
+      },
+      "search": {
+        "placeholder": "Search media...",
+        "noResults": "No media found"
+      },
+      "sortBy": {
+        "label": "Sort by:",
+        "newest": "Newest First",
+        "oldest": "Oldest First",
+        "nameAZ": "Name A-Z",
+        "nameZA": "Name Z-A"
+      },
+      "imageDetails": {
+        "title": "Image Details",
+        "filename": "Filename",
+        "filesize": "File Size",
+        "dimensions": "Dimensions",
+        "uploadedOn": "Uploaded On",
+        "altText": "Alt Text",
+        "updateAltText": "Update Alt Text",
+        "copyUrl": "Copy URL",
+        "urlCopied": "URL copied to clipboard",
+        "delete": "Delete Image",
+        "downloadOriginal": "Download Original"
+      },
+      "imageActions": {
+        "view": "View",
+        "edit": "Edit",
+        "download": "Download",
+        "delete": "Delete"
+      },
+      "confirmDelete": {
+        "title": "Delete Media?",
+        "message": "Are you sure you want to delete this item? This action cannot be undone.",
+        "cancel": "Cancel",
+        "confirm": "Yes, Delete"
+      },
+      "bulkActions": {
+        "title": "Bulk Actions",
+        "selected": "{{count}} selected",
+        "delete": "Delete Selected",
+        "download": "Download Selected"
+      },
+      "dropzone": {
+        "acceptedFileTypes": "Accepted file types: JPG, PNG, GIF, SVG, PDF",
+        "maxFileSize": "Max file size: 5MB"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "save": "Save Changes",
+      "saving": "Saving...",
+      "saveSuccess": "Settings saved successfully",
+      "saveFailed": "Failed to save settings",
+      "selectFromMedia": "Select from Media Library",
+      "groups": {
+        "general": "General",
+        "contact": "Contact Information",
+        "social": "Social Media",
+        "seo": "SEO",
+        "appearance": "Appearance",
+        "localization": "Localization",
+        "advanced": "Advanced"
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcomeMessage": "Welcome back! Here's what's happening with your inventory.",
+      "stats": {
+        "totalVehicles": "Total Vehicles",
+        "available": "Available",
+        "soldThisMonth": "Sold This Month",
+        "totalRevenue": "Total Revenue",
+        "fromLastMonth": "from last month"
+      },
+      "quickActions": {
+        "title": "Quick Actions",
+        "addVehicle": {
+          "title": "Add New Vehicle",
+          "description": "Create a new vehicle listing"
+        },
+        "manageInventory": {
+          "title": "Manage Inventory",
+          "description": "View and edit existing vehicles"
+        },
+        "analytics": {
+          "title": "View Analytics",
+          "description": "See sales and performance data"
+        },
+        "settings": {
+          "title": "Settings",
+          "description": "Adjust system preferences"
+        }
+      },
+      "recentActivity": {
+        "title": "Recent Activity",
+        "noActivity": "No recent activities found",
+        "actionTypes": {
+          "vehicleAdded": "Vehicle Added",
+          "vehicleSold": "Vehicle Sold",
+          "priceUpdated": "Price Updated",
+          "vehicleReserved": "Vehicle Reserved",
+          "vehicleDeleted": "Vehicle Deleted"
+        },
+        "timeAgo": {
+          "hoursAgo": "hours ago",
+          "dayAgo": "day ago",
+          "daysAgo": "days ago"
+        }
+      },
+      "inventory": {
+        "title": "Inventory Overview",
+        "viewAll": "View All Vehicles"
+      }
+    },
+    "vehicleManager": {
+      "title": "Vehicle Manager",
+      "description": "Add, edit and manage your vehicle listings",
+      "addVehicle": "Add Vehicle",
+      "search": "Search vehicles...",
+      "filter": "Filter",
+      "table": {
+        "vehicle": "Vehicle",
+        "price": "Price",
+        "status": "Status",
+        "added": "Added",
+        "actions": "Actions"
+      },
+      "status": {
+        "available": "Available",
+        "sold": "Sold",
+        "reserved": "Reserved",
+        "maintenance": "Maintenance"
+      },
+      "actions": {
+        "view": "View",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "form": {
+        "title": "Vehicle Information",
+        "basicInfo": "Basic Information",
+        "vehicleDetails": "Vehicle Details",
+        "images": "Vehicle Images",
+        "pricing": "Pricing",
+        "fields": {
+          "title": "Title",
+          "brand": "Brand",
+          "model": "Model",
+          "year": "Year",
+          "mileage": "Mileage",
+          "fuelType": "Fuel Type",
+          "transmission": "Transmission",
+          "condition": "Condition",
+          "price": "Price",
+          "description": "Description",
+          "features": "Features",
+          "mainImage": "Main Image",
+          "additionalImages": "Additional Images",
+          "status": "Status"
+        },
+        "placeholders": {
+          "title": "e.g., BMW 5 Series",
+          "description": "Detailed description of the vehicle...",
+          "features": "Add features separated by commas"
+        },
+        "imageUpload": {
+          "dragDrop": "Drag and drop images here, or click to select files",
+          "maxSize": "Maximum file size: 5MB",
+          "setAsPrimary": "Set as primary image",
+          "remove": "Remove"
+        },
+        "buttons": {
+          "save": "Save Vehicle",
+          "cancel": "Cancel",
+          "delete": "Delete Vehicle"
+        }
+      },
+      "confirmDelete": {
+        "title": "Delete Vehicle?",
+        "message": "Are you sure you want to delete this vehicle? This action cannot be undone.",
+        "cancel": "Cancel",
+        "confirm": "Yes, Delete"
+      }
+    },
+    "userManager": {
+      "pageTitle": "User Management",
+      "pageDescription": "Manage system users and permissions",
+      "title": "User Management",
+      "description": "View and manage all users in the system",
+      "addUser": "Add User",
+      "userCount": "{{count}} users",
+      "table": {
+        "name": "Name",
+        "email": "Email",
+        "role": "Role",
+        "status": "Status",
+        "lastLogin": "Last Login",
+        "actions": "Actions"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "pending": "Pending"
+      },
+      "roles": {
+        "admin": "Administrator",
+        "manager": "Manager",
+        "editor": "Editor",
+        "viewer": "Viewer"
+      },
+      "form": {
+        "addUser": "Add New User",
+        "editUser": "Edit User",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "role": "User Role",
+        "status": "Account Status",
+        "sendInvite": "Send invitation email",
+        "save": "Save User",
+        "cancel": "Cancel",
+        "passwordHelp": "Leave blank to keep current password",
+        "requiredField": "This field is required",
+        "invalidEmail": "Please enter a valid email address",
+        "passwordMismatch": "Passwords do not match",
+        "passwordRequirements": "Password must be at least 8 characters"
+      },
+      "messages": {
+        "userCreated": "User created successfully",
+        "userUpdated": "User updated successfully",
+        "userDeleted": "User deleted successfully",
+        "error": "An error occurred. Please try again."
+      },
+      "confirmDelete": {
+        "title": "Delete User?",
+        "message": "Are you sure you want to delete this user? This action cannot be undone.",
+        "cancel": "Cancel",
+        "confirm": "Yes, Delete"
+      },
+      "filters": {
+        "all": "All Users",
+        "active": "Active Users",
+        "inactive": "Inactive Users",
+        "admin": "Administrators",
+        "staff": "Staff Members"
+      }
+    },
+    "analytics": {
+      "pageTitle": "Analytics",
+      "pageDescription": "Sales analytics and performance metrics",
+      "title": "Analytics",
+      "subtitle": "Track your sales performance and inventory insights",
+      "months": {
+        "jan": "Jan",
+        "feb": "Feb",
+        "mar": "Mar",
+        "apr": "Apr",
+        "may": "May",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Aug",
+        "sep": "Sep",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Dec"
+      },
+      "metrics": {
+        "totalRevenue": "Total Revenue",
+        "vehiclesSold": "Vehicles Sold",
+        "averageSalePrice": "Average Sale Price",
+        "conversionRate": "Conversion Rate",
+        "increaseMonth": "+12.5% this month",
+        "decreaseMonth": "-2.1% this month"
+      },
+      "salesTrend": {
+        "title": "Sales Trend",
+        "salesCount": "{{count}} sales"
+      },
+      "topBrands": {
+        "title": "Top Brands",
+        "vehicleCount": "{{count}} vehicles"
+      },
+      "recentSales": {
+        "title": "Recent Sales",
+        "columns": {
+          "vehicle": "Vehicle",
+          "price": "Price",
+          "buyer": "Buyer",
+          "date": "Date",
+          "status": "Status"
+        },
+        "status": {
+          "completed": "Completed",
+          "pending": "Pending",
+          "cancelled": "Cancelled"
+        }
+      },
+      "insights": {
+        "bestMonth": {
+          "title": "Best Performing Month",
+          "vehiclesSold": "{{count}} vehicles sold"
+        },
+        "mostPopular": {
+          "title": "Most Popular Vehicle",
+          "unitsSold": "{{count}} units sold",
+          "avgPrice": "Average price"
+        },
+        "forecast": {
+          "title": "Revenue Forecast",
+          "nextMonth": "Next month forecast",
+          "projected": "projected increase"
+        },
+        "revenue": "revenue"
+      },
+      "demographics": {
+        "title": "Customer Demographics",
+        "age": {
+          "title": "Age Distribution"
+        },
+        "gender": {
+          "title": "Gender Distribution",
+          "male": "Male",
+          "female": "Female"
+        },
+        "location": {
+          "title": "Top Locations",
+          "other": "Other areas"
+        }
+      }
+    },
+    "activityLogs": {
+      "title": "Activity Logs",
+      "description": "Track and monitor all changes and activities in the system",
+      "results": "Results",
+      "totalEntries": "total entries",
+      "noLogs": "No activity logs found",
+      "clearLogs": "Clear Logs",
+      "export": "Export Logs",
+      "confirmClear": "Are you sure you want to clear all activity logs? This action cannot be undone.",
+      "detailedInfo": "Detailed Information",
+      "metadata": "Metadata",
+      "notAvailable": "Not available",
+      "columns": {
+        "action": "Action",
+        "details": "Details",
+        "user": "User",
+        "date": "Date & Time",
+        "expand": "Details"
+      },
+      "fields": {
+        "id": "Log ID",
+        "ip": "IP Address",
+        "entityId": "Entity ID",
+        "userId": "User ID"
+      },
+      "actions": {
+        "create": "Create",
+        "update": "Update",
+        "delete": "Delete",
+        "view": "View",
+        "login": "Login",
+        "logout": "Logout",
+        "import": "Import",
+        "export": "Export",
+        "publish": "Publish",
+        "unpublish": "Unpublish",
+        "upload": "Upload",
+        "download": "Download",
+        "settings_change": "Settings Change",
+        "status_change": "Status Change",
+        "other": "Other Action",
+        "expand": "Show Details",
+        "collapse": "Hide Details"
+      },
+      "entities": {
+        "vehicle": "Vehicle",
+        "user": "User",
+        "media": "Media",
+        "settings": "Settings",
+        "report": "Report",
+        "notification": "Notification",
+        "system": "System"
+      },
+      "filters": {
+        "title": "Filter Logs",
+        "entityType": "Entity Type",
+        "action": "Action Type",
+        "dateFrom": "Date From",
+        "dateTo": "Date To",
+        "userId": "User ID",
+        "allEntities": "All Entities",
+        "allActions": "All Actions",
+        "searchQuery": "Search",
+        "searchPlaceholder": "Search in details, names...",
+        "userIdPlaceholder": "Filter by User ID",
+        "reset": "Reset Filters",
+        "apply": "Apply Filters"
+      },
+      "pagination": {
+        "showing": "Page",
+        "of": "of",
+        "prev": "Previous",
+        "next": "Next"
+      }
+    },
+    "notifications": {
+      "title": "Notifications",
+      "viewAll": "View All Notifications",
+      "markAllAsRead": "Mark all as read",
+      "markAsRead": "Mark as read",
+      "noNotifications": "No notifications at this time",
+      "allRead": "All caught up!",
+      "unread": "Unread",
+      "all": "All",
+      "types": {
+        "system": "System",
+        "vehicle": "Vehicle",
+        "user": "User",
+        "media": "Media",
+        "alert": "Alert",
+        "info": "Info"
+      },
+      "priority": {
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "urgent": "Urgent"
+      },
+      "timeAgo": {
+        "justNow": "Just now",
+        "minute": "minute ago",
+        "minutes": "minutes ago",
+        "hour": "hour ago",
+        "hours": "hours ago",
+        "day": "day ago",
+        "days": "days ago"
+      },
+      "filters": {
+        "allTypes": "All Types",
+        "date": "Date",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "thisWeek": "This Week",
+        "thisMonth": "This Month",
+        "older": "Older"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "save": "Save Changes",
+      "saving": "Saving...",
+      "saveSuccess": "Settings saved successfully",
+      "saveFailed": "Failed to save settings",
+      "selectFromMedia": "Select from Media Library",
+      "groups": {
+        "general": "General",
+        "contact": "Contact Information",
+        "social": "Social Media",
+        "seo": "SEO",
+        "appearance": "Appearance",
+        "localization": "Localization",
+        "advanced": "Advanced"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Exceptional vehicles for exceptional people. Your premier destination for luxury automotive excellence.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "copyright": " 2024 AutoAni. All rights reserved."
+  },
+  "language": {
+    "sq": "Shqip",
+    "en": "English"
+  }
+}

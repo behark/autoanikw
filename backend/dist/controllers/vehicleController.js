@@ -84,12 +84,30 @@ exports.getVehicleById = getVehicleById;
 const createVehicle = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const vehicleData = req.body;
+        // Parse arrays that come as stringified JSON
+        if (vehicleData.features && typeof vehicleData.features === 'string') {
+            try {
+                vehicleData.features = JSON.parse(vehicleData.features);
+            }
+            catch (e) {
+                vehicleData.features = [];
+            }
+        }
+        if (vehicleData.categories && typeof vehicleData.categories === 'string') {
+            try {
+                vehicleData.categories = JSON.parse(vehicleData.categories);
+            }
+            catch (e) {
+                vehicleData.categories = [];
+            }
+        }
         // Handle file uploads if present
         if (req.files && Array.isArray(req.files)) {
+            const primaryIndex = parseInt(vehicleData.primaryImageIndex) || 0;
             vehicleData.images = req.files.map((file, index) => ({
                 url: `/uploads/vehicles/${file.filename}`,
-                altText: vehicleData.title,
-                isPrimary: index === 0 // First uploaded image is primary by default
+                altText: vehicleData.title || `Vehicle image ${index + 1}`,
+                isPrimary: index === primaryIndex
             }));
         }
         // Create new vehicle
@@ -98,6 +116,7 @@ const createVehicle = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         res.status(201).json(vehicle);
     }
     catch (error) {
+        console.error('Error creating vehicle:', error);
         res.status(400).json({ message: error.message });
     }
 });
@@ -107,44 +126,99 @@ const updateVehicle = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     try {
         const { id } = req.params;
         const updateData = req.body;
+        // Parse arrays that come as stringified JSON
+        if (updateData.features && typeof updateData.features === 'string') {
+            try {
+                updateData.features = JSON.parse(updateData.features);
+            }
+            catch (e) {
+                delete updateData.features;
+            }
+        }
+        if (updateData.categories && typeof updateData.categories === 'string') {
+            try {
+                updateData.categories = JSON.parse(updateData.categories);
+            }
+            catch (e) {
+                delete updateData.categories;
+            }
+        }
+        // Parse existing images if they came as a string
+        if (updateData.existingImages && typeof updateData.existingImages === 'string') {
+            try {
+                updateData.existingImages = JSON.parse(updateData.existingImages);
+            }
+            catch (e) {
+                updateData.existingImages = [];
+            }
+        }
         // Find vehicle first to get existing images
         const vehicle = yield Vehicle_1.default.findById(id);
         if (!vehicle) {
             res.status(404).json({ message: 'Vehicle not found' });
             return;
         }
-        // Handle file uploads if present
-        if (req.files && Array.isArray(req.files) && req.files.length > 0) {
-            // Keep existing images if not replacing them completely
-            const existingImages = updateData.keepExistingImages ? (vehicle.images || []) : [];
-            // Add new images
-            const newImages = req.files.map((file) => ({
-                url: `/uploads/vehicles/${file.filename}`,
-                altText: updateData.title || vehicle.title,
-                isPrimary: false
-            }));
-            updateData.images = [...existingImages, ...newImages];
+        // Prepare final images array
+        let finalImages = [];
+        // Handle existing images if specified
+        if (updateData.existingImages && Array.isArray(updateData.existingImages)) {
+            finalImages = [...updateData.existingImages];
+            // Remove existingImages from update data as we'll set the final images at the end
+            delete updateData.existingImages;
         }
-        // Handle image deletion
+        else {
+            // If no existingImages specified, keep all current ones
+            finalImages = vehicle.images || [];
+        }
+        // Handle images to delete
+        if (updateData.imagesToDelete && typeof updateData.imagesToDelete === 'string') {
+            try {
+                updateData.imagesToDelete = JSON.parse(updateData.imagesToDelete);
+            }
+            catch (e) {
+                updateData.imagesToDelete = [];
+            }
+        }
         if (updateData.imagesToDelete && Array.isArray(updateData.imagesToDelete)) {
             // Delete image files from server
             for (const imageUrl of updateData.imagesToDelete) {
-                const imagePath = path_1.default.join(__dirname, '../../', imageUrl.replace('/', ''));
-                if (fs_1.default.existsSync(imagePath)) {
-                    fs_1.default.unlinkSync(imagePath);
+                try {
+                    const imagePath = path_1.default.join(__dirname, '../../', imageUrl.replace(/^\//, ''));
+                    if (fs_1.default.existsSync(imagePath)) {
+                        fs_1.default.unlinkSync(imagePath);
+                        console.log(`Deleted image: ${imagePath}`);
+                    }
+                }
+                catch (error) {
+                    console.error(`Failed to delete image: ${error}`);
                 }
             }
-            // Filter out deleted images from database
-            if (vehicle.images && updateData.images) {
-                updateData.images = updateData.images.filter((img) => !updateData.imagesToDelete.includes(img.url));
-            }
-            else if (vehicle.images) {
-                updateData.images = vehicle.images.filter((img) => !updateData.imagesToDelete.includes(img.url));
-            }
+            // Filter out deleted images from final images array
+            finalImages = finalImages.filter((img) => !updateData.imagesToDelete.includes(img.url));
             // Remove imagesToDelete from update data
             delete updateData.imagesToDelete;
-            delete updateData.keepExistingImages;
         }
+        // Handle file uploads if present
+        if (req.files && Array.isArray(req.files) && req.files.length > 0) {
+            const primaryIndex = parseInt(updateData.primaryImageIndex) || 0;
+            // Add new images
+            const newImages = req.files.map((file, index) => ({
+                url: `/uploads/vehicles/${file.filename}`,
+                altText: updateData.title || vehicle.title,
+                isPrimary: index === primaryIndex && finalImages.every((img) => !img.isPrimary)
+            }));
+            // Append new images to final images array
+            finalImages = [...finalImages, ...newImages];
+        }
+        // Ensure we have one primary image
+        let hasPrimaryImage = finalImages.some((img) => img.isPrimary);
+        if (!hasPrimaryImage && finalImages.length > 0) {
+            finalImages[0].isPrimary = true;
+        }
+        // Set the final images to the update data
+        updateData.images = finalImages;
+        // Remove unnecessary fields
+        delete updateData.primaryImageIndex;
         // Update vehicle
         const updatedVehicle = yield Vehicle_1.default.findByIdAndUpdate(id, updateData, {
             new: true,
@@ -153,6 +227,7 @@ const updateVehicle = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         res.json(updatedVehicle);
     }
     catch (error) {
+        console.error('Error updating vehicle:', error);
         res.status(400).json({ message: error.message });
     }
 });

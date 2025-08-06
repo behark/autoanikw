@@ -1,0 +1,633 @@
+{
+  "title": "AutoAni - Përsosmëria në Automjete Luksoze | Tregu Premium i Automjeteve",
+  "description": "Zbuloni automjete të jashtëzakonshme për njerëz të jashtëzakonshëm. AutoAni ofron makina luksoze të para-përdorura me vëmendje metikuleske ndaj cilësisë dhe shërbimit ndaj klientit.",
+  "keywords": "makina luksoze, automjete premium, treg automjetesh, Mercedes-Benz, BMW, Audi",
+  "og": {
+    "title": "AutoAni - Përsosmëria në Automjete Luksoze",
+    "description": "Zbuloni automjete të para-përdorura me cilësi premium me përzgjedhjen e kuruar të AutoAni dhe shërbim të jashtëzakonshëm."
+  },
+  "navigation": {
+    "home": "Kryefaqja",
+    "vehicles": "Automjetet",
+    "about": "Rreth Nesh",
+    "services": "Shërbimet",
+    "contact": "Kontakti"
+  },
+  "hero": {
+    "title": "Automjete të Jashtëzakonshme për Njerëz të Jashtëzakonshëm",
+    "subtitle": "Zbuloni automjete të para-përdorura me cilësi premium me përzgjedhjen e kuruar të AutoAni dhe shërbim të jashtëzakonshëm.",
+    "stats": {
+      "vehicles": "Automjete Luksoze",
+      "experience": "Vite Përvojë",
+      "satisfaction": "Kënaqësi e Klientit"
+    },
+    "buttons": {
+      "inventory": "Shiko Inventarin",
+      "about": "Rreth Nesh"
+    }
+  },
+  "premiumSelection": {
+    "badge": "Përzgjedhje Premium",
+    "title": "Automjete të Zgjedhura",
+    "subtitle": "Zbuloni përzgjedhjen tonë të automjeteve premium të para-përdorura, të inspektuara me kujdes dhe të mirëmbajtura sipas standardeve më të larta."
+  },
+  "vehicle": {
+    "badge": {
+      "premium": "Premium",
+      "certified": "I Certifikuar",
+      "exclusive": "Ekskluziv"
+    },
+    "image": {
+      "mercedes": "Mercedes-Benz E-Class",
+      "bmw": "BMW Seria 5",
+      "audi": "Audi A6"
+    },
+    "brand": {
+      "mercedes": "Mercedes-Benz",
+      "bmw": "BMW",
+      "audi": "Audi"
+    },
+    "title": {
+      "mercedes": "E-Class 450",
+      "bmw": "Seria 5 540i",
+      "audi": "A6 Prestige"
+    },
+    "price": {
+      "mercedes": "€42,500",
+      "bmw": "€39,000",
+      "audi": "€37,500"
+    },
+    "details": {
+      "mercedes": "2021 | 24,000 km",
+      "bmw": "2020 | 36,000 km",
+      "audi": "2019 | 45,000 km"
+    },
+    "actions": {
+      "viewDetails": "Shiko Detajet",
+      "contact": "Kontakt"
+    }
+  },
+  "premiumServices": {
+    "badge": "Shërbime Premium",
+    "title": "Shërbimet Tona Premium",
+    "subtitle": "Në AutoAni, ne shkojmë përtej thjesht shitjes së automjeteve. Ne ofrojmë një përvojë gjithëpërfshirëse me shërbime premium të përshtatura për nevojat tuaja.",
+    "inspection": {
+      "title": "Inspektim i Detajuar",
+      "description": "Çdo automjet i nënshtrohet një inspektimi gjithëpërfshirës 150-pikësh për të garantuar cilësinë dhe besueshmërinë."
+    },
+    "warranty": {
+      "title": "Garanci e Zgjeruar",
+      "description": "Programe gjithëpërfshirëse garancie që ofrojnë qetësi mendore dhe mbrojnë kundër kostove të papritura të riparimit."
+    },
+    "brands": {
+      "title": "Markat Premium",
+      "description": "Përzgjedhje e kuruar nga prodhuesit më të respektuar të automjeteve në botë."
+    }
+  },
+  "featuredVehicles": {
+    "title": "Automjete të Zgjedhura",
+    "subtitle": "Zbuloni përzgjedhjen tonë të automjeteve premium të para-përdorura, të inspektuara me kujdes dhe të mirëmbajtura sipas standardeve më të larta.",
+    "viewDetails": "Shiko Detajet",
+    "contact": "Kontakt"
+  },
+  "services": {
+    "meta": {
+      "title": "Shërbimet Tona - AutoAni | Shërbime Automobilistike Premium",
+      "description": "Zbuloni gamën gjithëpërfshirëse të shërbimeve premium automobilistike të AutoAni duke përfshirë shitjet, financimin, mirëmbajtjen dhe shërbimet e kujdestarisë për automjetet luksoze.",
+      "keywords": "shërbime automobilistike, shërbime për makina luksoze, financimi i automjeteve, mirëmbajtje, shërbime kujdestarie, AutoAni"
+    },
+    "hero": {
+      "title": "Shërbime Premium",
+      "subtitle": "Zgjidhje gjithëpërfshirëse automobilistike të krijuara për të tejkaluar pritshmëritë tuaja. Nga shitjet tek shërbimi, ne ofrojmë përsosmëri në çdo pikë kontakti."
+    },
+    "core": {
+      "title": "Shërbimet Tona Kryesore",
+      "description": "Ne ofrojmë një gamë të plotë shërbimesh për të siguruar që përvoja juaj luksoze automobilistike të jetë e qetë, e këndshme dhe e përshtatur për nevojat tuaja unike.",
+      "sales": {
+        "title": "Shitje Automjetesh Premium",
+        "description": "Përzgjedhja jonë e kujdesshme e automjeteve luksoze i nënshtrohet inspektimit dhe certifikimit rigoroz. Çdo automjet është i përzgjedhur me kujdes për cilësinë, performancën dhe gjendjen e tij të jashtëzakonshme.",
+        "features": [
+          "Inspektim gjithëpërfshirës i automjetit me 150 pika",
+          "Raporte të detajuara të historisë së automjetit",
+          "Pastrimi dhe përgatitja profesionale",
+          "Çmime dhe dokumentacion transparent"
+        ]
+      },
+      "financing": {
+        "title": "Zgjidhje Financimi",
+        "description": "Opsione fleksibël financimi të përshtatura për situatën tuaj financiare. Ekipi ynë me përvojë në financa punon me huadhënës premium për të siguruar norma dhe kushte konkurruese.",
+        "features": [
+          "Norma interesi konkurruese dhe kushte fleksibël",
+          "Proces i shpejtë para-aprovimi",
+          "Opsione të disponueshme qiraje dhe blerjeje",
+          "Vlerësimi dhe përpunimi i këmbimit"
+        ]
+      },
+      "maintenance": {
+        "title": "Mirëmbajtje & Shërbim",
+        "description": "Programet profesionale të mirëmbajtjes dhe shërbimit të dizajnuara për të mbajtur automjetin tuaj luksoz në performancën e tij maksimale. Teknikët tanë të certifikuar përdorin vetëm pjesë dhe lëngje premium.",
+        "features": [
+          "Teknikë dhe pajisje të certifikuara nga fabrika",
+          "Pjesë origjinale OEM dhe lëngje premium",
+          "Paketa gjithëpërfshirëse shërbimi",
+          "Planifikim i përshtatshëm dhe shërbim marrje/dorëzim"
+        ]
+      },
+      "concierge": {
+        "title": "Shërbime Kujdestarie",
+        "description": "Shërbim me doreza të bardha që shtrihet përtej ekspozitës. Ekipi ynë i kujdestarisë merret me çdo detaj për të siguruar një përvojë pronësie të qetë dhe luksoze.",
+        "features": [
+          "Shërbime të dorëzimit dhe marrjes së automjetit",
+          "Koordinim i sigurimit dhe ndihmë për pretendimet",
+          "Shërbime të regjistrimit dhe transferimit të titullit",
+          "Mbështetje dhe ndihmë për klientët 24/7"
+        ]
+      }
+    },
+    "additional": {
+      "title": "Shërbime Shtesë",
+      "description": "Shërbime mbështetëse gjithëpërfshirëse të krijuara për të përmirësuar përvojën tuaj të pronësisë dhe për të mbrojtur investimin tuaj për vitet e ardhshme.",
+      "warranty": {
+        "title": "Garanci të Zgjatura",
+        "description": "Programe gjithëpërfshirëse garancie që ofrojnë qetësi mendore dhe mbrojnë kundër kostove të papritura të riparimit.",
+        "features": [
+          "Nivele të shumta mbulimi të disponueshme",
+          "Rrjet shërbimi kombëtar",
+          "Të transferueshme për pronarët e rinj"
+        ]
+      },
+      "tradein": {
+        "title": "Shërbime Këmbimi",
+        "description": "Shërbime profesionale të vlerësimit dhe këmbimit të automjeteve që maksimizojnë vlerën e automjetit tuaj aktual.",
+        "features": [
+          "Vlerësime të bazuara në treg nga ekspertë",
+          "Proces i shpejtë vlerësimi",
+          "Oferta konkurruese këmbimi"
+        ]
+      },
+      "inspection": {
+        "title": "Inspektim Automjeti",
+        "description": "Inspektime të hollësishme para-blerjes për automjetet nga burime të tjera për të siguruar cilësi dhe qetësi mendore.",
+        "features": [
+          "Inspektim gjithëpërfshirës me 150 pika",
+          "Raporte të detajuara inspektimi",
+          "Rekomandime profesionale"
+        ]
+      },
+      "sourcing": {
+        "title": "Gjetja e Automjeteve",
+        "description": "Nuk mund të gjeni automjetin e saktë që po kërkoni? Ekipi ynë i gjetjes do të lokalizojë makinën tuaj të ëndrrave nga rrjeti ynë.",
+        "features": [
+          "Rrjet kombëtar shitësish",
+          "Parametra të personalizuar kërkimi",
+          "Garanci e sigurimit të cilësisë"
+        ]
+      },
+      "detailing": {
+        "title": "Shërbime Detajimi",
+        "description": "Shërbime profesionale të detajimit për të mbajtur automjetin tuaj luksoz në pamje të pastër dhe për të ruajtur vlerën e tij.",
+        "features": [
+          "Detajim i brendshëm dhe i jashtëm",
+          "Shërbime të mbrojtjes së bojës",
+          "Aplikime të shtresës qeramike"
+        ]
+      },
+      "support": {
+        "title": "Mbështetje për Klientët",
+        "description": "Ekipi i përkushtuar i mbështetjes së klientëve në dispozicion për t'ju ndihmuar me çdo pyetje ose shqetësim gjatë gjithë përvojës suaj të pronësisë.",
+        "features": [
+          "Linjë telefonike e mbështetjes së klientëve 24/7",
+          "Menaxherë të dedikuar të llogarive",
+          "Planifikim prioritar i shërbimit"
+        ]
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Shërbimit",
+      "description": "Përjetoni një proces të thjeshtuar të krijuar për lehtësinë dhe qetësinë tuaj të mendjes. Çdo hap është hartuar për të tejkaluar pritshmëritë tuaja.",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Konsultim",
+          "description": "Ne fillojmë me një konsultim të detajuar për të kuptuar nevojat, preferencat dhe kërkesat tuaja të buxhetit."
+        },
+        {
+          "number": "2",
+          "title": "Përzgjedhje",
+          "description": "Ekspertët tanë ju ndihmojnë të zgjidhni automjetin perfekt nga inventari ynë i kujdesshëm ose ta gjejnë atë posaçërisht për ju."
+        },
+        {
+          "number": "3",
+          "title": "Financim",
+          "description": "Ne aranzhojmë opsione konkurruese financimi dhe përpunojmë të gjithë dokumentacionin për ta bërë procesin të qetë."
+        },
+        {
+          "number": "4",
+          "title": "Dorëzim",
+          "description": "Automjeti juaj përgatitet për përsosmëri dhe dorëzohet me shërbim me doreza të bardha dhe dokumentacion të plotë."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Përjetoni Shërbimin Premium",
+      "description": "Gati për të përjetuar diferencën AutoAni? Na kontaktoni sot për të mësuar më shumë rreth shërbimeve tona dhe se si mund t'ju ndihmojmë me nevojat tuaja luksoze automobilistike.",
+      "consultation": "Planifikoni Konsultim",
+      "inventory": "Shfletoni Inventarin"
+    }
+  },
+  "vehicles": {
+    "meta": {
+      "title": "Inventari i Automjeteve Luksoze | AutoAni",
+      "description": "Shfletoni koleksionin tonë ekskluziv të automjeteve luksoze të parapërdorura. Gjeni makinën tuaj të ëndrrave me përzgjedhjen e kuruar të AutoAni.",
+      "keywords": "automjete luksoze, makina premium, automjete të parapërdorura, koncesionar luksoz, listimi i makinave"
+    },
+    "hero": {
+      "title": "Automjete të Jashtëzakonshme",
+      "subtitle": "Zbuloni koleksionin tonë të përzgjedhur me kujdes të automjeteve premium, secili i përzgjedhur për përsosmërinë e tyre në performancë, dizajn dhe gjendje."
+    },
+    "filters": {
+      "brand": {
+        "label": "Marka",
+        "all": "Të Gjitha Markat"
+      },
+      "year": {
+        "label": "Viti",
+        "all": "Të Gjitha Vitet"
+      },
+      "price": {
+        "label": "Gama e Çmimeve",
+        "all": "Të Gjitha Çmimet",
+        "under30k": "Nën €30,000",
+        "30kTo60k": "€30,000 - €60,000",
+        "60kTo100k": "€60,000 - €100,000",
+        "over100k": "Mbi €100,000"
+      }
+    },
+    "listing": {
+      "results": "Duke shfaqur {count} rezultate",
+      "noResults": "Nuk u gjetën automjete që përputhen me kriteret tuaja",
+      "sortBy": "Rendit sipas",
+      "sortOptions": {
+        "newest": "Më të Rejat në Fillim",
+        "oldest": "Më të Vjetrat në Fillim",
+        "priceLowHigh": "Çmimi: Ulët në të Lartë",
+        "priceHighLow": "Çmimi: Lartë në të Ulët"
+      }
+    },
+    "vehicle": {
+      "details": "Shiko Detajet",
+      "year": "Viti",
+      "mileage": "{value} kilometra",
+      "transmission": "Transmisioni",
+      "fuel": "Lloji i Karburantit",
+      "condition": "Gjendja"
+    },
+    "detail": {
+      "specifications": "Specifikimet",
+      "features": "Veçoritë",
+      "inquire": "Pyetni për Këtë Automjet",
+      "testDrive": "Planifikoni Provën e Drejtimit",
+      "financing": "Opsionet e Financimit",
+      "similar": "Automjete të Ngjashme",
+      "backToInventory": "Kthehu te Inventari"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Rreth Nesh - AutoAni | Automjete Luksoze Premium",
+      "description": "Mësoni për angazhimin e AutoAni për përsosmëri në shitjen e automjeteve luksoze. Zbuloni historinë tonë, vlerat dhe përkushtimin ndaj shërbimit të jashtëzakonshëm të klientit.",
+      "keywords": "rreth AutoAni, shitës makinash luksoze, automjete premium, përsosmëri automobilistike, shërbim klienti"
+    },
+    "hero": {
+      "title": "Rreth AutoAni",
+      "subtitle": "Të dedikuar për të ofruar automjete luksoze të jashtëzakonshme dhe përvoja të pakrahasueshme të klientit që nga themelimi ynë. Ne besojmë se çdo udhëtim duhet të jetë i jashtëzakonshëm."
+    },
+    "story": {
+      "title": "Historia Jonë",
+      "paragraph1": "E themeluar me një vizion për të ripërcaktuar përvojën e automjeteve luksoze, AutoAni ka qenë në pararojë të shitjeve të automjeteve premium për më shumë se dy dekada. Udhëtimi ynë filloi me një besim të thjeshtë: që njerëzit e jashtëzakonshëm meritojnë automjete të jashtëzakonshme.",
+      "paragraph2": "Nga fillimet tona modeste si një dyqan butik, ne jemi rritur në një destinacion të besuar për klientët me shikim të mprehtë që vlerësojnë cilësinë, mjeshtërinë dhe vëmendjen e pakompromis ndaj detajit.",
+      "paragraph3": "Sot, ne vazhdojmë të mbajmë të njëjtat parime që udhëhoqën themelimin tonë: integritetin, përsosmërinë dhe një përkushtim të palëkundur ndaj kënaqësisë së klientit."
+    },
+    "mission": {
+      "title": "Misioni dhe Vlerat Tona",
+      "subtitle": "Ne jemi të përkushtuar për të ofruar një përvojë automobilistike të jashtëzakonshme që tejkalon pritjet dhe ndërton marrëdhënie të qëndrueshme me klientët tanë të vlerësuar.",
+      "values": {
+        "excellence": {
+          "title": "Përsosmëria",
+          "description": "Ne mbajmë standardet më të larta në gjithçka që bëjmë, nga përzgjedhja e automjeteve deri tek shërbimi ndaj klientit, duke siguruar që çdo ndërveprim të pasqyrojë angazhimin tonë për cilësinë."
+        },
+        "integrity": {
+          "title": "Integriteti",
+          "description": "Transparenca dhe ndershmëria udhëheqin çdo transaksion. Ne ndërtojmë besim përmes komunikimit të qartë dhe praktikave etike të biznesit që vendosin klientët tanë në radhë të parë."
+        },
+        "innovation": {
+          "title": "Inovacioni",
+          "description": "Ne përqafojmë teknologjinë e avancuar dhe qasjet moderne për të përmirësuar përvojën e blerjes së automjeteve duke respektuar vlerat tradicionale të mjeshtërisë."
+        }
+      }
+    },
+    "team": {
+      "title": "Njihuni me Ekipin Tonë",
+      "subtitle": "Profesionistët tanë me përvojë janë të pasionuar pas automjeteve luksoze dhe të përkushtuar për t'ju ndihmuar të gjeni përputhjen perfekte për stilin tuaj të jetesës dhe preferencat tuaja.",
+      "members": {
+        "ceo": {
+          "role": "Drejtoria Ekzekutive",
+          "position": "Drejtor Ekzekutiv",
+          "description": "Duke udhëhequr kompaninë me vizion dhe ekspertizë, duke drejtuar inovacionin në industrinë e automjeteve luksoze duke mbajtur vlerat tona thelbësore."
+        },
+        "sales": {
+          "role": "Menaxhimi i Shitjeve",
+          "position": "Drejtor i Shitjeve",
+          "description": "Mbikëqyrja e marrëdhënieve me klientët dhe sigurimi që çdo klient të marrë vëmendje të personalizuar dhe udhëzim ekspert gjatë gjithë udhëtimit të tij."
+        },
+        "specialists": {
+          "role": "Specialistët e Automjeteve",
+          "position": "Ekspertë të Produktit",
+          "description": "Specialistët tanë të ditur zotërojnë ekspertizë të thellë në automjetet luksoze, duke ndihmuar klientët të marrin vendime të informuara me besim."
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Pse të Zgjidhni AutoAni",
+      "subtitle": "Zbuloni çfarë na dallon në tregun e automjeteve luksoze dhe pse klientët me shikim të mprehtë zgjedhin AutoAni për nevojat e tyre për automjete.",
+      "reasons": {
+        "quality": {
+          "title": "Sigurimi i Cilësisë",
+          "description": "Çdo automjet i nënshtrohet inspektimit rigoroz dhe plotëson standardet tona të sakta për cilësi dhe performancë."
+        },
+        "service": {
+          "title": "Shërbim Ekspert",
+          "description": "Ekipi ynë i profesionistëve ofron udhëzime të ditura dhe shërbim të jashtëzakonshëm në çdo hap."
+        },
+        "warranty": {
+          "title": "Mbrojtja e Garancisë",
+          "description": "Opsionet gjithëpërfshirëse të garancisë ofrojnë qetësi mendore dhe mbrojtje për investimin tuaj."
+        },
+        "experience": {
+          "title": "Përvojë Luksoze",
+          "description": "Nga konsultimi deri tek dorëzimi, ne sigurohemi që çdo aspekt i përvojës suaj të pasqyrojë luks dhe sofistikim."
+        }
+      }
+    },
+    "cta": {
+      "title": "Gati për të Filluar Udhëtimin Tuaj?",
+      "description": "Përjetoni diferencën AutoAni. Na lejoni t'ju ndihmojmë të gjeni automjetin perfekt luksoz që përputhet me stilin tuaj të jetesës dhe tejkalon pritjet tuaja.",
+      "inventory": "Shiko Inventarin Tonë",
+      "contact": "Na Kontaktoni Sot"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Na Kontaktoni - AutoAni | Automjete Luksoze Premium",
+      "description": "Kontaktoni me ekipin e specialistëve të automjeteve luksoze të AutoAni. Ne jemi këtu për t'iu përgjigjur pyetjeve tuaja dhe për t'ju ndihmuar të gjeni automjetin tuaj perfekt.",
+      "keywords": "kontaktoni AutoAni, dyqan makinash luksoze, pyetje për automjete premium, konsulencë automobilistike"
+    },
+    "hero": {
+      "title": "Na Kontaktoni",
+      "subtitle": "Ne jemi këtu për t'ju ndihmuar me çdo pyetje rreth automjeteve ose shërbimeve tona premium. Ekipi ynë i specialistëve të automjeteve është gati të ofrojë asistencë të personalizuar."
+    },
+    "form": {
+      "title": "Na Dërgoni një Mesazh",
+      "name": "Emri Juaj",
+      "email": "Email-i Juaj",
+      "phone": "Numri i Telefonit",
+      "subject": "Tema",
+      "message": "Mesazhi Juaj",
+      "submit": "Dërgo Mesazhin",
+      "success": "Mesazhi juaj është dërguar me sukses! Do t'ju kontaktojmë së shpejti.",
+      "error": "Kishte një gabim në dërgimin e mesazhit tuaj. Ju lutemi provoni përsëri."
+    },
+    "info": {
+      "title": "Informacione Kontakti",
+      "description": "Keni pyetje ose keni nevojë për ndihmë? Ekipi ynë është gati t'ju ndihmojë me çdo pyetje rreth automjeteve tona, shërbimeve ose çdo gjë tjetër.",
+      "address": {
+        "title": "Na Vizitoni",
+        "line1": "AutoAni Automjete Premium",
+        "line2": "Rruga Luksoze 123",
+        "line3": "Tiranë, Shqipëri 1001"
+      },
+      "phone": {
+        "title": "Na Telefononi",
+        "number": "+355 4X XXX XXX",
+        "hours": "Hënë-Premte: 9:00-18:00, E Shtunë: 10:00-16:00"
+      },
+      "email": {
+        "title": "Na Dërgoni Email",
+        "address": "info@autoani.com",
+        "support": "Për ndihmë: support@autoani.com"
+      }
+    },
+    "map": {
+      "title": "Na Gjeni",
+      "directions": "Merr Udhëzimet",
+      "view": "Shiko në Hartë"
+    },
+    "hours": {
+      "title": "Orari i Punës",
+      "description": "Vizitoni ekspozitën tonë premium për të parë automjetet tona luksoze personalisht dhe për të takuar ekipin tonë ekspert.",
+      "monday": "Hënë - Premte",
+      "saturday": "E Shtunë",
+      "sunday": "E Diel",
+      "time": "9:00 - 18:00",
+      "appointment": "Vetëm me Rezervim",
+      "note": "Shënim:"
+    },
+    "faq": {
+      "title": "Pyetje të Shpeshta",
+      "description": "Përgjigje të shpejta për pyetjet e zakonshme rreth shërbimeve, proceseve dhe politikave tona.",
+      "trade": "A pranoni shkëmbime automjetesh?",
+      "trade": {
+        "description": "Po, ne pranojmë shkëmbime për shumicën e automjeteve. Vlerësuesit tanë ekspertë do të vlerësojnë automjetin tuaj aktual dhe do t'ju japin një ofertë konkurruese të bazuar në treg që mund të aplikohet për blerjen tuaj."
+      },
+      "financing": "Çfarë opsionesh financimi janë të disponueshme?",
+      "financing": {
+        "description": "Ne ofrojmë një shumëllojshmëri opsionesh financimi duke përfshirë kredi tradicionale të automjeteve, programe qiraje dhe financim të veçantë për blerësit e kualifikuar. Ekipi ynë i financave punon me shumë huadhënës për të siguruar normat dhe kushtet më të mira."
+      },
+      "history": "A ofroni raporte të historikut të automjetit?",
+      "history": {
+        "description": "Absolutisht. Çdo automjet në inventarin tonë vjen me një raport gjithëpërfshirës të historikut të automjetit dhe ka kaluar procesin tonë rigoroz të inspektimit 150-pikësh për të siguruar cilësi dhe besueshmëri."
+      },
+      "locate": "A mund të ndihmoni për të gjetur një automjet specifik?",
+      "locate": {
+        "description": "Po, ekipi ynë i gjetjes së automjeteve mund të ndihmojë për të gjetur marka, modele, ngjyra dhe paketa opsionesh specifike përmes rrjetit tonë të gjerë të shitësve. Kontaktoni ne me kërkesat tuaja dhe ne do të gjejmë automjetin tuaj perfekt."
+      }
+    },
+    "call": {
+      "title": "Gati për të Filluar?",
+      "description": "Nëse jeni gati për të blerë, keni pyetje për inventarin tonë, ose keni nevojë për ndihmë me financimin, ekipi ynë është këtu për t'ju ndihmuar në çdo hap të rrugës.",
+      "phone": "Telefononi Tani: (555) 123-4567",
+      "inventory": "Shikoni Inventarin Tonë"
+    }
+  },
+  "footer": {
+    "tagline": "Automjete të jashtëzakonshme për njerëz të jashtëzakonshëm. Destinacioni juaj kryesor për përsosmëri në automjete luksoze.",
+    "quickLinks": "Lidhje të Shpejta",
+    "contactInfo": "Informacion Kontakti",
+    "phone": "Telefon",
+    "email": "Email",
+    "address": "Adresa",
+    "copyright": " 2024 AutoAni. Të gjitha të drejtat e rezervuara."
+  },
+  "language": {
+    "sq": "Shqip",
+    "en": "English"
+  },
+  "admin": {
+    "meta": {
+      "title": "Paneli i Administratorit - AutoAni",
+      "description": "Paneli i Administratorit AutoAni"
+    },
+    "sidebar": {
+      "title": "Paneli i Administratorit",
+      "dashboard": "Paneli Kryesor",
+      "vehicles": "Automjetet",
+      "users": "Përdoruesit",
+      "mediaLibrary": "Libraria e Medias",
+      "analytics": "Analitika",
+      "activityLogs": "Regjistri i Aktiviteteve",
+      "settings": "Cilësimet",
+      "user": {
+        "adminUser": "Admin",
+        "viewSite": "Shiko Faqen",
+        "openSidebar": "Hap Menunë"
+      }
+    },
+    "activityLogs": {
+      "title": "Regjistri i Aktiviteteve",
+      "description": "Gjurmo dhe monitoro të gjitha ndryshimet dhe aktivitetet në sistem",
+      "results": "Rezultatet",
+      "totalEntries": "total të regjistruara",
+      "noLogs": "Nuk u gjetën regjistrime aktiviteti",
+      "clearLogs": "Pastro Regjistrimet",
+      "export": "Eksporto Regjistrimet",
+      "confirmClear": "Jeni të sigurt që dëshironi të pastroni të gjitha regjistrimet e aktivitetit? Ky veprim nuk mund të kthehet.",
+      "detailedInfo": "Informacion i detajuar",
+      "metadata": "Metadata",
+      "notAvailable": "Nuk disponohet",
+      "columns": {
+        "action": "Veprimi",
+        "details": "Detaje",
+        "user": "Përdoruesi",
+        "date": "Data & Ora",
+        "expand": "Detajet"
+      },
+      "fields": {
+        "id": "ID e Regjistrimit",
+        "ip": "Adresa IP",
+        "entityId": "ID e Entitetit",
+        "userId": "ID e Përdoruesit"
+      },
+      "actions": {
+        "create": "Krijim",
+        "update": "Përditësim",
+        "delete": "Fshirje",
+        "view": "Shikim",
+        "login": "Hyrje",
+        "logout": "Dalje",
+        "import": "Import",
+        "export": "Eksport",
+        "publish": "Publikim",
+        "unpublish": "Çpublikim",
+        "upload": "Ngarkim",
+        "download": "Shkarkim",
+        "settings_change": "Ndryshim Cilësimesh",
+        "status_change": "Ndryshim Statusi",
+        "other": "Veprim Tjetër",
+        "expand": "Shfaq Detajet",
+        "collapse": "Fshih Detajet"
+      },
+      "entities": {
+        "vehicle": "Automjet",
+        "user": "Përdorues",
+        "media": "Media",
+        "settings": "Cilësime",
+        "report": "Raport",
+        "notification": "Njoftim",
+        "system": "Sistem"
+      },
+      "filters": {
+        "title": "Filtro Regjistrimet",
+        "entityType": "Lloji i Entitetit",
+        "action": "Lloji i Veprimit",
+        "dateFrom": "Data nga",
+        "dateTo": "Data deri",
+        "userId": "ID e Përdoruesit",
+        "allEntities": "Të gjitha Entitetet",
+        "allActions": "Të gjitha Veprimet",
+        "searchQuery": "Kërko",
+        "searchPlaceholder": "Kërko në detaje, emra...",
+        "userIdPlaceholder": "Filtro sipas ID së Përdoruesit",
+        "reset": "Rivendos Filtrat",
+        "apply": "Apliko Filtrat"
+      },
+      "pagination": {
+        "showing": "Faqja",
+        "of": "nga",
+        "prev": "E mëparshme",
+        "next": "Tjetra"
+      }
+    },
+    "mediaLibrary": {
+      {{ ... }}
+    },
+    "notifications": {
+      "title": "Njoftimet",
+      "viewAll": "Shiko të Gjitha Njoftimet",
+      "markAllAsRead": "Shëno të gjitha si të lexuara",
+      "markAsRead": "Shëno si të lexuar",
+      "noNotifications": "Nuk ka njoftime në këtë moment",
+      "allRead": "Të gjitha njoftimet janë lexuar!",
+      "unread": "Të palexuara",
+      "all": "Të gjitha",
+      "types": {
+        "system": "Sistemi",
+        "vehicle": "Automjeti",
+        "user": "Përdoruesi",
+        "media": "Media",
+        "alert": "Alarmi",
+        "info": "Info"
+      },
+      "priority": {
+        "low": "E ulët",
+        "medium": "Mesatare",
+        "high": "E lartë",
+        "urgent": "Urgjente"
+      },
+      "timeAgo": {
+        "justNow": "Tani",
+        "minute": "minutë më parë",
+        "minutes": "minuta më parë",
+        "hour": "orë më parë",
+        "hours": "orë më parë",
+        "day": "ditë më parë",
+        "days": "ditë më parë"
+      },
+      "filters": {
+        "allTypes": "Të Gjitha Tipet",
+        "date": "Data",
+        "today": "Sot",
+        "yesterday": "Dje",
+        "thisWeek": "Këtë Javë",
+        "thisMonth": "Këtë Muaj",
+        "older": "Më të vjetra"
+      }
+    },
+    "settings": {
+      "title": "Cilësimet",
+      "save": "Ruaj Ndryshimet",
+      "saving": "Duke ruajtur...",
+      "saveSuccess": "Cilësimet u ruajtën me sukses",
+      "saveFailed": "Dështoi ruajtja e cilësimeve",
+      "selectFromMedia": "Zgjidh nga Biblioteka e Mediave",
+      "groups": {
+        "general": "Të përgjithshme",
+        "contact": "Informacioni i Kontaktit",
+        "social": "Rrjetet Sociale",
+        "seo": "SEO",
+        "appearance": "Pamja",
+        "localization": "Lokalizimi",
+        "advanced": "Të Avancuara"
+      }
+    }
+  }
+}

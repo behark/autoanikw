@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import MainLayout from '../../src/components/layout/MainLayout';
 import SeoHead from '../../src/components/seo/SeoHead';
 import { LazyImage } from '../../src/components/ui/LazyImage';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 // Mock data for vehicle listings
 const VEHICLE_LISTINGS = [
@@ -93,44 +95,40 @@ const VEHICLE_LISTINGS = [
 
 // Vehicle Card Component
 const VehicleCard = ({ vehicle }) => {
+  const { t } = useTranslation('common');
+  
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px]">
-      <div className="relative h-48 w-full">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+      <div className="relative h-48 overflow-hidden">
         <LazyImage
           src={vehicle.image}
           alt={vehicle.title}
-          className="object-cover w-full h-full"
+          className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
         />
-        <div className="absolute top-3 right-3 bg-primary-600 text-white px-2 py-1 rounded-md text-sm font-semibold">
-          ${vehicle.price.toLocaleString()}
+        <div className="absolute top-0 right-0 bg-primary-600 text-white text-xs font-bold px-2 py-1 m-2 rounded">
+          {new Intl.NumberFormat('sq-AL', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(vehicle.price)}
         </div>
       </div>
       <div className="p-4">
-        <h3 className="text-lg font-bold text-neutral-900">{vehicle.title}</h3>
-        <div className="mt-2 text-sm text-neutral-600">
-          <div className="flex flex-wrap gap-3">
-            <span className="flex items-center gap-1">
-              <span className="w-1 h-1 bg-primary-400 rounded-full"></span>
-              {vehicle.year}
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-1 h-1 bg-primary-400 rounded-full"></span>
-              {vehicle.mileage.toLocaleString()} mi
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-1 h-1 bg-primary-400 rounded-full"></span>
-              {vehicle.fuelType}
-            </span>
-          </div>
+        <h3 className="font-bold text-lg text-neutral-900">{vehicle.title}</h3>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="text-sm text-neutral-600 bg-neutral-100 px-2 py-1 rounded">
+            {t('vehicles.vehicle.year')}: {vehicle.year}
+          </span>
+          <span className="text-sm text-neutral-600 bg-neutral-100 px-2 py-1 rounded">
+            {t('vehicles.vehicle.mileage', { value: vehicle.mileage.toLocaleString() })}
+          </span>
         </div>
         <div className="mt-4 flex justify-between items-center">
+          <div className="text-sm text-neutral-600">
+            {vehicle.condition} • {vehicle.transmission}
+          </div>
           <a 
             href={`/vehicles/${vehicle.slug}`}
-            className="text-primary-600 hover:text-primary-800 font-semibold text-sm"
+            className="text-sm font-medium text-primary-600 hover:text-primary-700"
           >
-            View Details
+            {t('vehicles.vehicle.details')} →
           </a>
-          <span className="bg-neutral-100 text-neutral-700 px-2 py-1 rounded text-xs font-medium">{vehicle.brand}</span>
         </div>
       </div>
     </div>
@@ -171,6 +169,7 @@ const VehicleGridSkeleton = ({ count = 6 }) => {
 };
 
 export default function VehiclesPage() {
+  const { t } = useTranslation('common');
   const [isLoading, setIsLoading] = useState(true);
   const [vehicles, setVehicles] = useState([]);
   const [filters, setFilters] = useState({
@@ -256,9 +255,9 @@ export default function VehiclesPage() {
     <MainLayout>
       {/* Page-specific SEO with schema.org markup */}
       <SeoHead 
-        title="Luxury Vehicles Inventory | AutoAni"
-        description="Browse our exclusive collection of premium pre-owned luxury vehicles. Find your next dream car with AutoAni's curated selection."
-        keywords="luxury vehicles, premium cars, pre-owned vehicles, luxury dealership, auto listings"
+        title={t('vehicles.meta.title')}
+        description={t('vehicles.meta.description')}
+        keywords={t('vehicles.meta.keywords')}
         structuredData={!isLoading ? generateVehicleListingsSchema() : undefined}
       />
       
@@ -266,9 +265,9 @@ export default function VehiclesPage() {
       <div className="bg-gradient-to-b from-neutral-800 to-neutral-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Exceptional Vehicles</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('vehicles.hero.title')}</h1>
             <p className="text-xl text-neutral-300">
-              Discover our handpicked collection of premium vehicles, each selected for their excellence in performance, design, and condition.
+              {t('vehicles.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -279,7 +278,7 @@ export default function VehiclesPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-4 items-center">
             <div className="w-full md:w-auto">
-              <label className="block text-sm font-medium text-neutral-700 mb-1">Brand</label>
+              <label className="block text-sm font-medium text-neutral-700 mb-1">{t('vehicles.filters.brand.label')}</label>
               <select
                 name="brand"
                 className="w-full md:w-40 py-2 px-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -287,14 +286,14 @@ export default function VehiclesPage() {
                 onChange={handleFilterChange}
                 disabled={isLoading}
               >
-                <option value="">All Brands</option>
+                <option value="">{t('vehicles.filters.brand.all')}</option>
                 {brands.map(brand => (
                   <option key={brand} value={brand}>{brand}</option>
                 ))}
               </select>
             </div>
             <div className="w-full md:w-auto">
-              <label className="block text-sm font-medium text-neutral-700 mb-1">Year</label>
+              <label className="block text-sm font-medium text-neutral-700 mb-1">{t('vehicles.filters.year.label')}</label>
               <select
                 name="year"
                 className="w-full md:w-40 py-2 px-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -302,103 +301,84 @@ export default function VehiclesPage() {
                 onChange={handleFilterChange}
                 disabled={isLoading}
               >
-                <option value="">All Years</option>
+                <option value="">{t('vehicles.filters.year.all')}</option>
                 {years.map(year => (
                   <option key={year} value={year}>{year}</option>
                 ))}
               </select>
             </div>
             <div className="w-full md:w-auto">
-              <label className="block text-sm font-medium text-neutral-700 mb-1">Price Range</label>
+              <label className="block text-sm font-medium text-neutral-700 mb-1">{t('vehicles.filters.price.label')}</label>
               <select
                 name="priceRange"
-                className="w-full md:w-40 py-2 px-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full md:w-48 py-2 px-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                 value={filters.priceRange}
                 onChange={handleFilterChange}
                 disabled={isLoading}
               >
-                <option value="">Any Price</option>
-                <option value="0-50000">Under $50,000</option>
-                <option value="50000-100000">$50,000 - $100,000</option>
-                <option value="100000+">$100,000+</option>
+                <option value="">{t('vehicles.filters.price.all')}</option>
+                <option value="under30k">{t('vehicles.filters.price.under30k')}</option>
+                <option value="30kTo60k">{t('vehicles.filters.price.30kTo60k')}</option>
+                <option value="60kTo100k">{t('vehicles.filters.price.60kTo100k')}</option>
+                <option value="over100k">{t('vehicles.filters.price.over100k')}</option>
               </select>
             </div>
-            <button
-              className="mt-4 md:mt-6 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-md transition-colors ml-auto"
-              disabled={isLoading}
-            >
-              Apply Filters
-            </button>
           </div>
         </div>
       </div>
       
-      {/* Vehicles Grid */}
-      <div className="bg-neutral-100 py-12">
-        <div className="container mx-auto px-4">
-          <div className="mb-8 flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-neutral-800">
-              {!isLoading ? `${filteredVehicles.length} Vehicles Available` : 'Loading Vehicles...'}
-            </h2>
-            <div className="flex gap-2">
-              <button className="bg-white p-2 rounded-md border border-neutral-200 hover:bg-neutral-50">
-                <span className="sr-only">Grid view</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="text-neutral-600" viewBox="0 0 16 16">
-                  <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
-                </svg>
-              </button>
-              <button className="p-2 rounded-md border border-neutral-200 hover:bg-neutral-50">
-                <span className="sr-only">List view</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="text-neutral-600" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg>
-              </button>
+      {/* Results Section */}
+      <div className="container mx-auto px-4 py-12">
+        {isLoading ? (
+          // Loading state
+          <>
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-semibold text-neutral-900">Loading...</h2>
             </div>
-          </div>
-          
-          {isLoading ? (
-            <VehicleGridSkeleton count={6} />
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredVehicles.map(vehicle => (
-                <VehicleCard key={vehicle.id} vehicle={vehicle} />
-              ))}
-              {filteredVehicles.length === 0 && (
-                <div className="col-span-full text-center py-16">
-                  <h3 className="text-xl font-semibold text-neutral-700">No vehicles match your filter criteria</h3>
-                  <p className="text-neutral-600 mt-2">Try adjusting your filters or browse all vehicles</p>
-                  <button 
-                    onClick={() => setFilters({ brand: '', year: '', priceRange: '' })}
-                    className="mt-4 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-md transition-colors"
-                  >
-                    Clear Filters
-                  </button>
+            <VehicleGridSkeleton />
+          </>
+        ) : (
+          <>
+            {filteredVehicles.length > 0 ? (
+              <>
+                <div className="flex justify-between items-center mb-6">
+                  <h2 className="text-2xl font-semibold text-neutral-900">
+                    {t('vehicles.listing.results', { count: filteredVehicles.length })}
+                  </h2>
+                  {/* Sort options would go here */}
                 </div>
-              )}
-            </div>
-          )}
-          
-          {/* Pagination */}
-          {!isLoading && filteredVehicles.length > 0 && (
-            <div className="mt-10 flex justify-center">
-              <div className="inline-flex rounded-md shadow-sm">
-                <button className="px-4 py-2 border border-neutral-300 rounded-l-md bg-white text-neutral-700 hover:bg-neutral-50 disabled:opacity-50">
-                  Previous
-                </button>
-                <button className="px-4 py-2 border-t border-b border-neutral-300 bg-primary-50 text-primary-700 font-medium">
-                  1
-                </button>
-                <button className="px-4 py-2 border-t border-b border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50">
-                  2
-                </button>
-                <button className="px-4 py-2 border border-neutral-300 rounded-r-md bg-white text-neutral-700 hover:bg-neutral-50">
-                  Next
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filteredVehicles.map(vehicle => (
+                    <VehicleCard key={vehicle.id} vehicle={vehicle} />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="text-center py-12">
+                <div className="text-5xl mb-4">🔍</div>
+                <h2 className="text-2xl font-semibold text-neutral-900 mb-2">{t('vehicles.listing.noResults')}</h2>
+                <p className="text-neutral-600 mb-8">
+                  Try adjusting your filters or browse our entire collection.
+                </p>
+                <button 
+                  onClick={() => setFilters({ brand: '', year: '', priceRange: '' })}
+                  className="bg-primary-600 text-white px-6 py-2 rounded-md hover:bg-primary-700 transition-colors"
+                >
+                  {t('vehicles.filters.brand.all')}
                 </button>
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </>
+        )}
       </div>
     </MainLayout>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 }

@@ -17,14 +17,13 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/autoani';
-// MongoDB connection options
+// MongoDB connection options - removed deprecated options
 const options = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+// Modern Mongoose (v8+) doesn't need these options anymore
 };
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield mongoose_1.default.connect(MONGODB_URI, options);
+        yield mongoose_1.default.connect(MONGODB_URI);
         console.log('MongoDB connected successfully');
     }
     catch (error) {

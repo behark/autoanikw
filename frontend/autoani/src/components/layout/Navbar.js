@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import { useState } from 'react'
+import { useTranslation } from 'next-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const { t } = useTranslation('common')
 
   return (
     <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-700">
@@ -16,26 +19,24 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
+              {t('navigation.home')}
             </Link>
             <Link href="/vehicles" className="text-gray-300 hover:text-white transition-colors">
-              Vehicles
+              {t('navigation.vehicles')}
             </Link>
             <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-              About Us
+              {t('navigation.about')}
             </Link>
             <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
-              Services
+              {t('navigation.services')}
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
+              {t('navigation.contact')}
             </Link>
             <Link href="/admin" className="text-primary-400 hover:text-primary-300 transition-colors font-medium">
               Admin
             </Link>
-            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-white font-semibold transition-colors">
-              Get Started
-            </button>
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile menu button */}
@@ -58,26 +59,26 @@ export default function Navbar() {
           <div className="md:hidden bg-slate-800 border-t border-slate-700">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link href="/" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
-                Home
+                {t('navigation.home')}
               </Link>
               <Link href="/vehicles" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
-                Vehicles
+                {t('navigation.vehicles')}
               </Link>
               <Link href="/about" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
-                About Us
+                {t('navigation.about')}
               </Link>
               <Link href="/services" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
-                Services
+                {t('navigation.services')}
               </Link>
               <Link href="/contact" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
-                Contact
+                {t('navigation.contact')}
               </Link>
               <Link href="/admin" className="block px-3 py-2 text-primary-400 hover:text-primary-300 transition-colors font-medium">
                 Admin
               </Link>
-              <button className="w-full mt-4 bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-white font-semibold transition-colors">
-                Get Started
-              </button>
+              <div className="px-3 py-2">
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
         )}

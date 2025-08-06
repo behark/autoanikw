@@ -1,8 +1,10 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import MainLayout from '../../src/components/layout/MainLayout';
+import MainLayout from '@/components/layout/MainLayout';
 import { useState, useEffect } from 'react';
 import { FaGasPump, FaTachometerAlt, FaCog, FaCalendarAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 // Mock data - in a real app, you would fetch this from an API
 const vehiclesData = {
@@ -87,6 +89,7 @@ const vehiclesData = {
 };
 
 export default function VehicleDetail() {
+  const { t } = useTranslation('common');
   const router = useRouter();
   const { id } = router.query;
   const [vehicle, setVehicle] = useState(null);
@@ -125,8 +128,8 @@ export default function VehicleDetail() {
     return (
       <MainLayout>
         <div className="container mx-auto px-4 py-32">
-          <h1 className="text-3xl font-bold mb-6">Vehicle Not Found</h1>
-          <p>Sorry, the vehicle you're looking for doesn't exist or has been removed.</p>
+          <h1 className="text-3xl font-bold mb-6">{t('vehicles.listing.noResults')}</h1>
+          <p>{t('vehicles.listing.noResults')}</p>
         </div>
       </MainLayout>
     );
@@ -135,10 +138,10 @@ export default function VehicleDetail() {
   return (
     <MainLayout>
       <Head>
-        <title>{vehicle.title} | AutoAni Luxury Vehicles</title>
-        <meta name="description" content={`${vehicle.year} ${vehicle.title} - ${vehicle.condition} condition with ${vehicle.mileage.toLocaleString()} miles. Available at AutoAni Luxury Vehicles.`} />
-        <meta property="og:title" content={`${vehicle.title} | AutoAni Luxury Vehicles`} />
-        <meta property="og:description" content={`${vehicle.year} ${vehicle.title} - ${vehicle.condition} condition with ${vehicle.mileage.toLocaleString()} miles.`} />
+        <title>{vehicle.title} | {t('vehicles.meta.title')}</title>
+        <meta name="description" content={`${vehicle.year} ${vehicle.title} - ${vehicle.condition} ${t('vehicles.vehicle.condition')} ${t('vehicles.vehicle.mileage', { value: vehicle.mileage.toLocaleString() })}. ${t('vehicles.meta.description')}`} />
+        <meta property="og:title" content={`${vehicle.title} | ${t('vehicles.meta.title')}`} />
+        <meta property="og:description" content={`${vehicle.year} ${vehicle.title} - ${vehicle.condition} ${t('vehicles.vehicle.condition')} ${t('vehicles.vehicle.mileage', { value: vehicle.mileage.toLocaleString() })}.`} />
         <meta property="og:image" content={vehicle.image} />
       </Head>
 
@@ -168,7 +171,7 @@ export default function VehicleDetail() {
                   onClick={() => setActiveImage(img)}
                   className={`cursor-pointer rounded overflow-hidden aspect-w-3 aspect-h-2 ${activeImage === img ? 'ring-2 ring-primary-500' : ''}`}
                 >
-                  <img src={img} alt={`${vehicle.title} view ${index + 1}`} className="w-full h-full object-cover" />
+                  <img src={img} alt={`${vehicle.title} ${t('vehicles.detail.similar')} ${index + 1}`} className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>
@@ -179,35 +182,37 @@ export default function VehicleDetail() {
             <h1 className="text-4xl font-bold text-neutral-800">{vehicle.title}</h1>
             
             <div className="mt-2 flex items-center">
-              <span className="text-xl font-bold text-primary-600">${vehicle.price.toLocaleString()}</span>
+              <span className="text-xl font-bold text-primary-600">
+                {new Intl.NumberFormat('sq-AL', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(vehicle.price)}
+              </span>
             </div>
             
             <div className="mt-6 grid grid-cols-2 gap-4">
               <div className="flex items-center">
                 <FaCalendarAlt className="text-primary-500 mr-2" />
-                <span>Year: <strong>{vehicle.year}</strong></span>
+                <span>{t('vehicles.vehicle.year')}: <strong>{vehicle.year}</strong></span>
               </div>
               <div className="flex items-center">
                 <FaTachometerAlt className="text-primary-500 mr-2" />
-                <span>Mileage: <strong>{vehicle.mileage.toLocaleString()} miles</strong></span>
+                <span>{t('vehicles.vehicle.mileage', { value: vehicle.mileage.toLocaleString() })}</span>
               </div>
               <div className="flex items-center">
                 <FaGasPump className="text-primary-500 mr-2" />
-                <span>Fuel: <strong>{vehicle.fuelType}</strong></span>
+                <span>{t('vehicles.vehicle.fuel')}: <strong>{vehicle.fuelType}</strong></span>
               </div>
               <div className="flex items-center">
                 <FaCog className="text-primary-500 mr-2" />
-                <span>Transmission: <strong>{vehicle.transmission}</strong></span>
+                <span>{t('vehicles.vehicle.transmission')}: <strong>{vehicle.transmission}</strong></span>
               </div>
             </div>
             
             <div className="mt-8">
-              <h2 className="text-2xl font-semibold text-neutral-800 mb-3">Description</h2>
+              <h2 className="text-2xl font-semibold text-neutral-800 mb-3">{t('vehicles.detail.specifications')}</h2>
               <p className="text-neutral-600">{vehicle.description}</p>
             </div>
             
             <div className="mt-8">
-              <h2 className="text-2xl font-semibold text-neutral-800 mb-3">Features</h2>
+              <h2 className="text-2xl font-semibold text-neutral-800 mb-3">{t('vehicles.detail.features')}</h2>
               <ul className="grid grid-cols-2 gap-2">
                 {vehicle.features.map((feature, index) => (
                   <li key={index} className="flex items-center">
@@ -220,22 +225,22 @@ export default function VehicleDetail() {
             
             {/* Contact Form */}
             <div className="mt-8 bg-neutral-50 p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold text-neutral-800 mb-4">Interested in this vehicle?</h2>
+              <h2 className="text-2xl font-semibold text-neutral-800 mb-4">{t('vehicles.detail.inquire')}</h2>
               
               <div className="flex flex-col space-y-4">
                 <div className="flex items-center space-x-3">
                   <FaPhoneAlt className="text-primary-500" />
-                  <span className="font-medium">Call us: <a href="tel:+15551234567" className="text-primary-600 hover:underline">+1 (555) 123-4567</a></span>
+                  <span className="font-medium">{t('contact.callUs')}: <a href="tel:+15551234567" className="text-primary-600 hover:underline">+1 (555) 123-4567</a></span>
                 </div>
                 
                 <div className="flex items-center space-x-3">
                   <FaEnvelope className="text-primary-500" />
-                  <span className="font-medium">Email us: <a href="mailto:sales@autoani.com" className="text-primary-600 hover:underline">sales@autoani.com</a></span>
+                  <span className="font-medium">{t('contact.emailUs')}: <a href="mailto:sales@autoani.com" className="text-primary-600 hover:underline">sales@autoani.com</a></span>
                 </div>
                 
                 <div className="mt-4">
                   <button className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-md transition-colors">
-                    Request More Information
+                    {t('vehicles.detail.testDrive')}
                   </button>
                 </div>
               </div>
@@ -245,4 +250,12 @@ export default function VehicleDetail() {
       </div>
     </MainLayout>
   );
+}
+
+export async function getServerSideProps({ params, locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 }

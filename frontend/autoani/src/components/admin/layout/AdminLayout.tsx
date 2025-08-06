@@ -1,6 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import dynamic from 'next/dynamic';
+
+// Import the NotificationDropdown with SSR disabled to prevent hydration mismatch
+const NotificationDropdown = dynamic(
+  () => import('../notifications/NotificationDropdown'),
+  { ssr: false }
+);
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -8,13 +16,29 @@ interface AdminLayoutProps {
 
 const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [formattedDate, setFormattedDate] = useState('');
   const router = useRouter();
+  const { t, i18n } = useTranslation('common');
+
+  // Format date on client-side only to avoid hydration mismatch
+  useEffect(() => {
+    setFormattedDate(
+      new Date().toLocaleDateString(i18n.language === 'en' ? 'en-US' : 'sq-AL', { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      })
+    );
+  }, [i18n.language]);
 
   const navigation = [
-    { name: 'Dashboard', href: '/admin', icon: '📊', current: router.pathname === '/admin' },
-    { name: 'Vehicles', href: '/admin/vehicles', icon: '🚗', current: router.pathname.startsWith('/admin/vehicles') },
-    { name: 'Analytics', href: '/admin/analytics', icon: '📈', current: router.pathname === '/admin/analytics' },
-    { name: 'Settings', href: '/admin/settings', icon: '⚙️', current: router.pathname === '/admin/settings' },
+    { name: t('admin.sidebar.dashboard'), href: '/admin', icon: '📊', current: router.asPath === '/admin' },
+    { name: t('admin.sidebar.vehicles'), href: '/admin/vehicles', icon: '🚗', current: router.asPath.startsWith('/admin/vehicles') },
+    { name: t('admin.sidebar.mediaLibrary'), href: '/admin/media', icon: '📸', current: router.asPath.startsWith('/admin/media') },
+    { name: t('admin.sidebar.analytics'), href: '/admin/analytics', icon: '📈', current: router.asPath === '/admin/analytics' },
+    { name: t('admin.sidebar.activityLogs'), href: '/admin/activity-logs', icon: '📝', current: router.asPath === '/admin/activity-logs' },
+    { name: t('admin.sidebar.settings'), href: '/admin/settings', icon: '⚙️', current: router.asPath === '/admin/settings' || router.asPath.startsWith('/admin/settings/') },
   ];
 
   return (
@@ -30,7 +54,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
       <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:static lg:inset-0 transition-transform duration-300 ease-in-out`}>
         <div className="flex items-center justify-center h-16 bg-gradient-to-r from-primary-600 to-primary-700">
           <Link href="/admin">
-            <span className="text-white text-xl font-bold">AutoAni Admin</span>
+            <span className="text-white text-xl font-bold">{t('admin.sidebar.title')}</span>
           </Link>
         </div>
         
@@ -63,9 +87,9 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
               </div>
             </div>
             <div className="ml-3">
-              <p className="text-sm font-medium text-neutral-700">Admin User</p>
+              <p className="text-sm font-medium text-neutral-700">{t('admin.sidebar.user.adminUser')}</p>
               <Link href="/">
-                <span className="text-xs text-primary-600 hover:text-primary-500">View Site</span>
+                <span className="text-xs text-primary-600 hover:text-primary-500">{t('admin.sidebar.user.viewSite')}</span>
               </Link>
             </div>
           </div>
@@ -83,7 +107,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
                 className="lg:hidden -ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-neutral-500 hover:text-neutral-900"
                 onClick={() => setSidebarOpen(true)}
               >
-                <span className="sr-only">Open sidebar</span>
+                <span className="sr-only">{t('admin.sidebar.openSidebar')}</span>
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -91,22 +115,22 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
               
               <div className="flex items-center space-x-4">
                 <span className="text-sm text-neutral-500">
-                  {new Date().toLocaleDateString('en-US', { 
-                    weekday: 'long', 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}
+                  {formattedDate}
                 </span>
+                
+                {/* Notification Dropdown */}
+                <NotificationDropdown />
+                
+                {/* User dropdown would go here */}
               </div>
             </div>
           </div>
         </div>
 
         {/* Page content */}
-        <main className="p-6">
+        <div className="py-6">
           {children}
-        </main>
+        </div>
       </div>
     </div>
   );

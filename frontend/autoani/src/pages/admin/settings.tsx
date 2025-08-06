@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import AdminLayout from '../../src/components/admin/layout/AdminLayout';
+import AdminLayout from '@/components/admin/layout/AdminLayout';
 
 const Settings = () => {
   const [settings, setSettings] = useState({
