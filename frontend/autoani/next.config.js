@@ -11,9 +11,32 @@ const nextConfig = {
     unoptimized: true,
     domains: ['images.unsplash.com'], // Add any other domains you're loading images from
   },
-  // Remove rewrites for static export since they aren't compatible
-  // with static export and the output: 'export' option
-  // Remove the target: 'serverless' as it's deprecated
+  // Asset optimization options
+  optimizeFonts: true,
+  swcMinify: true,
+  
+  // Improve CSS processing
+  webpack: (config) => {
+    // Improve CSS loading
+    const rules = config.module.rules
+      .find((rule) => typeof rule.oneOf === 'object')
+      .oneOf.filter((rule) => Array.isArray(rule.use) && rule.use.find((use) => use && use.loader && use.loader.includes('css-loader')));
+    
+    if (rules) {
+      rules.forEach((rule) => {
+        rule.use.forEach((use) => {
+          if (use && use.loader && use.loader.includes('css-loader')) {
+            use.options = {
+              ...use.options,
+              importLoaders: 1,
+            };
+          }
+        });
+      });
+    }
+    
+    return config;
+  },
 }
 
 module.exports = nextConfig

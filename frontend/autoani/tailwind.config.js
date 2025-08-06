@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -28,8 +29,8 @@ module.exports = {
           500: 'rgb(130, 130, 150)',
           600: 'rgb(98, 98, 122)',
           700: 'rgb(74, 74, 96)',
-          800: 'rgb(48, 48, 64)',
-          900: 'rgb(32, 32, 44)',
+          800: 'rgb(52, 52, 68)',
+          900: 'rgb(34, 34, 48)',
         },
       },
     },
@@ -39,5 +40,14 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
     require('tailwindcss-animate')
+  ],
+  safelist: [
+    'bg-primary-500',
+    'text-primary-600',
+    'hover:bg-primary-600',
+    'hover:text-white',
+    'bg-gray-200',
+    'hover:bg-gray-300',
+    'text-gray-800'
   ],
 }
