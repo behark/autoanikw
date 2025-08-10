@@ -7,7 +7,9 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:netlify": "npm ci && npm run build",
+    "postbuild": "echo 'Build completed for deployment'"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
